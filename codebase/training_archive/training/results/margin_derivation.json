@@ -1,0 +1,65 @@
+{
+  "exit1": {
+    "calibration_base_miss": 0.32061068702290074,
+    "calibration_n_sc": 3930,
+    "margin_val_base_miss": 0.3277777777777778,
+    "margin_val_n_sc": 2700,
+    "delta_k": 0.007167090754877037,
+    "margin_factors": {
+      "0.01": {
+        "alpha_calibration": 0.0028329092451229634,
+        "margin_factor": 0.2832909245122963
+      },
+      "0.05": {
+        "alpha_calibration": 0.042832909245122966,
+        "margin_factor": 0.8566581849024593
+      },
+      "0.1": {
+        "alpha_calibration": 0.09283290924512297,
+        "margin_factor": 0.9283290924512296
+      }
+    }
+  },
+  "exit2": {
+    "calibration_base_miss": 0.10508905852417302,
+    "calibration_n_sc": 3930,
+    "margin_val_base_miss": 0.09814814814814815,
+    "margin_val_n_sc": 2700,
+    "delta_k": 0.0,
+    "margin_factors": {
+      "0.01": {
+        "alpha_calibration": 0.01,
+        "margin_factor": 1.0
+      },
+      "0.05": {
+        "alpha_calibration": 0.05,
+        "margin_factor": 1.0
+      },
+      "0.1": {
+        "alpha_calibration": 0.1,
+        "margin_factor": 1.0
+      }
+    }
+  },
+  "exit3": {
+    "calibration_base_miss": 0.09923664122137404,
+    "calibration_n_sc": 3930,
+    "margin_val_base_miss": 0.08296296296296296,
+    "margin_val_n_sc": 2700,
+    "delta_k": 0.0,
+    "margin_factors": {
+      "0.01": {
+        "alpha_calibration": 0.01,
+        "margin_factor": 1.0
+      },
+      "0.05": {
+        "alpha_calibration": 0.05,
+        "margin_factor": 1.0
+      },
+      "0.1": {
+        "alpha_calibration": 0.1,
+        "margin_factor": 1.0
+      }
+    }
+  }
+}

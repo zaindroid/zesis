@@ -1,0 +1,4 @@
+transition,new_boundary_bytes,marginal_overhead_us
+mono -> 2seg (new: B-out|C-in copy),1024,583.41
+2seg -> 3seg (new: A-out|B-in copy),2048,1127.31
+3seg -> 4seg (new: C1-out|C2-in copy),2048,1142.68

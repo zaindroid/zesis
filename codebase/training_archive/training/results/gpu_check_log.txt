@@ -1,0 +1,22 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785273468.163632 1047574 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+I0000 00:00:1785273468.193942 1047574 cpu_feature_guard.cc:227] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI AVX512_BF16 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1785273468.959562 1047574 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+W0000 00:00:1785273469.778587 1047574 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.
+W0000 00:00:1785273469.793514 1047574 gpu_device.cc:2459] TensorFlow was not built with CUDA kernel binaries compatible with compute capability 12.0a. CUDA kernels will be jit-compiled from PTX, which could take 30 minutes or longer.
+I0000 00:00:1785273469.914525 1047574 gpu_device.cc:2043] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 29684 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 5090, pci bus id: 0000:01:00.0, compute capability: 12.0a
+Python:      3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]
+Platform:    Linux-6.17.0-35-generic-x86_64-with-glibc2.39
+TensorFlow:  2.21.0
+NumPy:       2.1.3
+
+GPUs visible to TF: 1
+  PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')
+    details: {'compute_capability': (12, 0), 'device_name': 'NVIDIA GeForce RTX 5090'}
+
+matmul executed on: /job:localhost/replica:0/task:0/device:GPU:0
+result checksum (sanity, non-deterministic): -361859.59
+
+PASS: TensorFlow sees the GPU and executed a real computation on it.

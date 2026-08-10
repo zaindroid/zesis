@@ -1,0 +1,5 @@
+policy,active_window_s,total_energy_mJ,mean_active_ua,baseline_ua
+naive,1.531,81.403,16115,13933
+static,1.484,78.668,16064,14440
+adaptive,1.466,77.557,16033,14623
+learned,1.448,76.745,16058,14443

@@ -1,0 +1,3 @@
+copy_method,dispatch_intercept_us,per_byte_cost_us
+float_divide,31.83,0.5387
+fixed_point_q16.16,29.76,0.4667

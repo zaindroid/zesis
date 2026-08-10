@@ -1,0 +1,7 @@
+# Dual-core contention test - BASELINE (core 1 idle, CORE1_CRYPTO=0)
+# Board FRDM-MCXN947 @150MHz, core 0 memory workload (8192-word array)
+# core 1 stack 0x8000
+workload_cycles
+294864
+294829
+294829

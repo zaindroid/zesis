@@ -1,0 +1,8 @@
+config,n_boundaries,copy_method,mean_us,overhead_vs_mono_us,overhead_per_boundary_us
+monolithic,0,n/a,1333.59,0,0
+seg2,1,float_divide,1917.27,583.68,583.68
+seg2f,1,fixed_point_q16.16,1841.22,507.63,507.63
+seg3,2,float_divide,3045.71,1712.12,856.06
+seg3f,2,fixed_point_q16.16,2819.11,1485.52,742.76
+seg4,3,float_divide,4188.32,2854.73,951.58
+seg4f,3,fixed_point_q16.16,3812.22,2478.63,826.21

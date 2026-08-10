@@ -1,0 +1,58 @@
+/*
+ * Copyright 2022-2023, 2026 NXP
+ *
+ * SPDX-License-Identifier: BSD-3-Clause
+ */
+/*${header:start}*/
+#include "pin_mux.h"
+#include "board.h"
+#include "app.h"
+#include "mcmgr.h"
+#include "board_init.h"
+/*${header:end}*/
+
+/*******************************************************************************
+ * Definitions
+ ******************************************************************************/
+/*${function:start}*/
+void BOARD_InitHardware(void)
+{
+    /* attach FRO 12M to FLEXCOMM4 (debug console) */
+    CLOCK_AttachClk(BOARD_DEBUG_UART_CLK_ATTACH);
+    CLOCK_SetClkDiv(kCLOCK_DivFlexcom4Clk, 1u);
+
+    BOARD_InitBootPins();
+    BOARD_InitBootClocks();
+    BOARD_InitDebugConsole();
+
+    CLOCK_EnableClock(kCLOCK_Gpio0);
+
+    GPIO_EnablePinControlNonSecure(BOARD_LED_RED_GPIO, (1 << BOARD_LED_RED_GPIO_PIN));
+}
+
+void BOARD_Init(void)
+{
+    BOARD_InitHardware();
+
+    /* Enable caching of flash memory (needed for NPU/TFLM inference performance) */
+    SYSCON->LPCAC_CTRL = SYSCON->LPCAC_CTRL & ~SYSCON_LPCAC_CTRL_DIS_LPCAC_MASK;
+    SYSCON->NVM_CTRL = SYSCON->NVM_CTRL & ~SYSCON_NVM_CTRL_DIS_FLASH_DATA_MASK;
+}
+
+#ifdef CORE1_IMAGE_COPY_TO_RAM
+uint32_t get_core1_image_size(void)
+{
+    uint32_t image_size;
+#if defined(__CC_ARM) || defined(__ARMCC_VERSION)
+    image_size = (uint32_t)&Image$$CORE1_REGION$$Length;
+#elif defined(__ICCARM__)
+#pragma section = "__core1_image"
+    image_size = (uint32_t)__section_end("__core1_image") - (uint32_t)&core1_image_start;
+#elif defined(__GNUC__)
+    image_size = (uint32_t)core1_image_size;
+#endif
+    return image_size;
+}
+#endif
+
+/*${function:end}*/

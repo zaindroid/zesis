@@ -1,0 +1,16 @@
+/*
+ * ESP32-S3 board overlay: route the Zephyr console to the native USB
+ * Serial/JTAG (VID_303A:1001 = COM11 on the user's board). The default
+ * devkitc console is uart0 (USB-UART bridge via CP2102) which is NOT
+ * present on this board — only the native USB Serial/JTAG is wired.
+ */
+/ {
+	chosen {
+		zephyr,console = &usb_serial;
+		zephyr,shell-uart = &usb_serial;
+	};
+};
+
+&usb_serial {
+	status = "okay";
+};

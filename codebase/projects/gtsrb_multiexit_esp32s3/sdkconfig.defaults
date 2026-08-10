@@ -1,0 +1,37 @@
+# Target: ESP32-S3, native USB-Serial/JTAG console, 240 MHz.
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# Max CPU frequency for speed benchmarks.
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# Large main stack for the benchmark loop (model arenas are static globals,
+# but keep headroom for printf-heavy result dumps).
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=16384
+
+# Native USB serial/JTAG console (VID_303A PID_1001) at 115200.
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+
+# Turn off anything that could perturb timing (WiFi/BT off by default; ensure).
+CONFIG_WIFI_ENABLED=y
+
+# Compile size-optimized for the code in flash.
+CONFIG_COMPILER_OPTIMIZATION_SIZE=y
+
+# PSRAM: model arenas (608 KB total) exceed the 512 KB internal SRAM, so the
+# TFLite Micro arenas live in external PSRAM (8 MB on the DevKitC).
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL=16384
+
+# Benchmark runs long CPU-bound inference on the main task; the idle-task WDT
+# check would fire (main task never yields). Not needed for benchmarking.
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0=n
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1=n
+CONFIG_ESP_TASK_WDT_EN=n
+CONFIG_ESP_TASK_WDT_INIT=n

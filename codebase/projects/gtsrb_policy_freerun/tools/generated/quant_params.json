@@ -1,0 +1,102 @@
+{
+  "segA": {
+    "inputs": [
+      {
+        "name": "serving_default_image:0",
+        "scale": 0.007843137718737125,
+        "zero_point": -1,
+        "shape": [
+          1,
+          48,
+          48,
+          3
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall_1:1",
+        "scale": 0.0235294122248888,
+        "zero_point": -128,
+        "shape": [
+          1,
+          12,
+          12,
+          32
+        ]
+      },
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "scale": 0.24679212272167206,
+        "zero_point": 43,
+        "shape": [
+          1,
+          43
+        ]
+      }
+    ]
+  },
+  "segB": {
+    "inputs": [
+      {
+        "name": "serving_default_block3_features:0",
+        "scale": 0.0235294122248888,
+        "zero_point": -128,
+        "shape": [
+          1,
+          12,
+          12,
+          32
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall_1:1",
+        "scale": 0.0235294122248888,
+        "zero_point": -128,
+        "shape": [
+          1,
+          6,
+          6,
+          40
+        ]
+      },
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "scale": 0.24181991815567017,
+        "zero_point": 56,
+        "shape": [
+          1,
+          43
+        ]
+      }
+    ]
+  },
+  "segC": {
+    "inputs": [
+      {
+        "name": "serving_default_block6_features:0",
+        "scale": 0.0235294122248888,
+        "zero_point": -128,
+        "shape": [
+          1,
+          6,
+          6,
+          40
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "StatefulPartitionedCall_1:0",
+        "scale": 0.22515566647052765,
+        "zero_point": 7,
+        "shape": [
+          1,
+          43
+        ]
+      }
+    ]
+  }
+}

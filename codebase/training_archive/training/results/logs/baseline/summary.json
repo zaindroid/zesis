@@ -1,0 +1,14 @@
+{
+  "config": "train/configs/baseline.yaml",
+  "model_kind": "baseline",
+  "param_counts": {
+    "total": 101539
+  },
+  "n_train_proper": 29999,
+  "n_val_slice": 3360,
+  "final_eval": {
+    "acc": 0.913095235824585,
+    "loss": 0.49842724204063416
+  },
+  "epochs_trained": 100
+}

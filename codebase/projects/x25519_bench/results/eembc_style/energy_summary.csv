@@ -1,0 +1,2 @@
+variant,board,idle_baseline_mA,peak_mA,active_window_s,expected_window_s,total_charge_mC,total_energy_mJ,mean_active_current_mA,per_exchange_uJ,keypair_uJ,shared_secret_uJ
+X25519,boardB,14.240036684999968,17.164555024999945,29.0675,27.168918335999997,494.6218391059132,1632.2520690495135,17.016318538089383,17002.625719265765,8501.327859086603,8501.297860179162

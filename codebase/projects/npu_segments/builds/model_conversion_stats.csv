@@ -1,0 +1,6 @@
+model,npu_total_data_bytes,npu_total_weights_bytes,npu_total_size_bytes,npu_cycle_estimate,npu_latency_estimate_us_at_150mhz,arena_size_used_kib_105pct
+monolithic,14346,7788,22134,61665,411.1,14.71
+seg_AB,15360,2248,17608,43197,288.0,15.75
+seg_A,14336,712,15048,22845,152.3,14.70
+seg_B,7168,1640,8808,20349,135.7,7.35
+seg_C,3114,5644,8758,18465,123.1,3.19

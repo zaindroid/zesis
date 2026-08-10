@@ -1,0 +1,5 @@
+config,n_segments,n_boundaries,mean_us,stdev_us,min_us,max_us,overhead_vs_monolithic_us,overhead_per_boundary_us,marginal_overhead_vs_prev_us
+monolithic,1,0,1333.43,0.67,1333,1338,0,0,0
+2-segment,2,1,1916.84,0.44,1916,1919,583.41,583.41,583.41
+3-segment,3,2,3044.15,0.38,3043,3045,1710.72,855.36,1127.31
+4-segment,4,3,4186.83,0.38,4186,4187,2853.40,951.13,1142.68

@@ -1,0 +1,59 @@
+Converting model with the following options:
+  Input  = seg_C.tflite
+  Output = seg_C_converted.tflite
+  Target = mcxn94x
+===================================================== subgraph_004 =====================================================
+Number of Kernels: 3
+Number of Jobs:    26
+Total cycle count: 18465
+---------------------------------------------------------------
+| Kernel Name      | Cycle Count | Number of Jobs | Job Range |
+---------------------------------------------------------------
+| Conv2DStandardV1 | 17765       | 24             | 1 : 24    |
+| GlobalAvgPool    | 547         | 1              | 25 : 25   |
+| FullyConnected   | 153         | 1              | 26 : 26   |
+---------------------------------------------------------------
+========================================================================================================================
+Statistics for NeutronGraph "subgraph_004":
+  Operators:
+    Number of Neutron operators = 3
+    Number of builtin operators = 6
+  Memory:
+    Inputs        = 1,024 (bytes)
+    Microcode     = 392 (bytes)
+    Weights       = 5,252 (bytes)
+    Kernels       = 0 (bytes)
+    Outputs       = 10 (bytes)
+    Scratch       = 2,080 (bytes) (Allocation efficiency: 1)
+    Total data    = 3,114 (bytes) (Inputs + Outputs + Scratch)
+    Total weights = 5,644 (bytes) (Microcode + Weights + Kernels)
+    Total size    = 8,758 (bytes) (All)
+  Latency:
+    Cycle estimation   = 18,465 (cycles)
+    Latency estimation = 0.123 (ms) (@ 150.000 MHz)
+========================================================================================================================
+Overall statistics for graph "main":
+  Operators:
+    Number of operators after import    = 3
+    Number of operators after optimize  = 6
+    Number of operators after extract   = 1
+      Number of Neutron graphs          = 1
+      Number of operators total         = 6
+      Number of operators converted     = 6
+      Number of operators NOT converted = 0
+    Operator conversion ratio           = 6 / 6 = 1
+    Operators converted                 = 0,1,2,3,4,5,
+  Memory:
+    Total data    = 3,120 (bytes) (Inputs + Outputs + Intermediate Variable Tensors)
+    Total weights = 5,680 (bytes) (Weights)
+    Total size    = 8,800 (bytes) (All)
+  Latency:
+    Cycle estimation   = 18,465 (cycles) (NPU only)
+    Latency estimation = 0.123 (ms) (@ 150.000 MHz) (NPU only)
+========================================================================================================================
+Conversion time:
+  Optimization = 0.0024866 (seconds)
+  Extraction   = 0.0006463 (seconds)
+  Generation   = 0.0027742 (seconds)
+  Total        = 0.0059071 (seconds)
+========================================================================================================================

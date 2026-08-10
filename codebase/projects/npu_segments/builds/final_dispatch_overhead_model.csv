@@ -1,0 +1,7 @@
+build,copy_method,dispatch_overhead_us,per_byte_copy_cost_us
+debug (-O0),float divide,31.83,0.5387
+debug (-O0),fixed-point Q16.16,29.76,0.4667
+release (-O3),float divide,28.51,0.2991
+release (-O3),fixed-point Q16.16,26.53,0.1403
+,,,
+SUMMARY,min/max/mean dispatch (us),26.53 / 31.83 / 29.16,

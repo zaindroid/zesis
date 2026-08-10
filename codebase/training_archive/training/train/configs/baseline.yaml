@@ -1,0 +1,17 @@
+# train/configs/baseline.yaml
+# No-exit control model: same backbone, single final-exit output, single CE
+# loss. Used to check whether joint multi-exit training costs the final
+# classifier any accuracy relative to training it alone.
+seed: 20260728
+model: baseline
+
+batch_size: 128
+epochs: 100
+learning_rate: 0.001
+
+val_track_fraction: 0.1
+
+exit_loss_weights: {}  # unused for baseline (single output, single loss)
+
+checkpoint_dir: results/checkpoints/baseline
+log_dir: results/logs/baseline

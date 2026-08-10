@@ -1,0 +1,10 @@
+exit,target_alpha,tau_k,certifiable_at_calibration,n_accepted_test,achieved_miss_rate_test,passes
+exit1,0.01,1.0,False,0,nan,False
+exit1,0.05,0.957,True,892,0.0067,True
+exit1,0.1,0.918,True,1530,0.0196,True
+exit2,0.01,0.994,True,5567,0.0054,True
+exit2,0.05,0.926,True,6998,0.0296,True
+exit2,0.1,0.725,True,7758,0.0619,True
+exit3,0.01,0.999,True,6557,0.0114,False
+exit3,0.05,0.944,True,7625,0.0408,True
+exit3,0.1,0.628,True,8227,0.0752,True

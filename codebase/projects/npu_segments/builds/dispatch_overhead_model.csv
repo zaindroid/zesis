@@ -1,0 +1,4 @@
+parameter,value,unit
+fixed_dispatch_overhead,31.83,us per NPU boundary
+requantize_copy_cost,0.5387,us per byte (float scalar loop)
+requantize_copy_cost_per_element,538.7,ns per INT8 element

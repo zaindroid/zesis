@@ -1,0 +1,9 @@
+/* STM32N6570-DK: redirect console from USART1 (PE5/PE6, ST-Link VCOM) to
+ * USART2 (PD5/D1 TX, PF6/D0 RX) which is broken out on the Arduino header.
+ * This lets a USB-serial adapter capture the console on D0/D1. */
+/ {
+	chosen {
+		zephyr,console = &usart2;
+		zephyr,shell-uart = &usart2;
+	};
+};

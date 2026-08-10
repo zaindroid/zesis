@@ -1,0 +1,63 @@
+Converting model with the following options:
+  Input  = monolithic.tflite
+  Output = monolithic_converted.tflite
+  Target = mcxn94x
+===================================================== subgraph_008 =====================================================
+Number of Kernels: 7
+Number of Jobs:    90
+Total cycle count: 61665
+---------------------------------------------------------------
+| Kernel Name      | Cycle Count | Number of Jobs | Job Range |
+---------------------------------------------------------------
+| Conv2DStandardV1 | 20453       | 24             | 1 : 24    |
+| MaxPool          | 2392        | 8              | 25 : 32   |
+| Conv2DStandardV1 | 19048       | 24             | 33 : 56   |
+| MaxPool          | 1304        | 8              | 57 : 64   |
+| Conv2DStandardV1 | 17768       | 24             | 65 : 88   |
+| GlobalAvgPool    | 547         | 1              | 89 : 89   |
+| FullyConnected   | 153         | 1              | 90 : 90   |
+---------------------------------------------------------------
+========================================================================================================================
+Statistics for NeutronGraph "subgraph_008":
+  Operators:
+    Number of Neutron operators = 7
+    Number of builtin operators = 12
+  Memory:
+    Inputs        = 4,096 (bytes)
+    Microcode     = 904 (bytes)
+    Weights       = 6,884 (bytes)
+    Kernels       = 0 (bytes)
+    Outputs       = 10 (bytes)
+    Scratch       = 10,240 (bytes) (Allocation efficiency: 1)
+    Total data    = 14,346 (bytes) (Inputs + Outputs + Scratch)
+    Total weights = 7,788 (bytes) (Microcode + Weights + Kernels)
+    Total size    = 22,134 (bytes) (All)
+  Latency:
+    Cycle estimation   = 61,665 (cycles)
+    Latency estimation = 0.411 (ms) (@ 150.000 MHz)
+========================================================================================================================
+Overall statistics for graph "main":
+  Operators:
+    Number of operators after import    = 7
+    Number of operators after optimize  = 13
+    Number of operators after extract   = 2
+      Number of Neutron graphs          = 1
+      Number of operators total         = 13
+      Number of operators converted     = 12
+      Number of operators NOT converted = 1
+    Operator conversion ratio           = 12 / 13 = 0.923077
+    Operators converted                 = 1,2,3,4,5,6,7,8,9,10,11,12,
+  Memory:
+    Total data    = 14,352 (bytes) (Inputs + Outputs + Intermediate Variable Tensors)
+    Total weights = 7,856 (bytes) (Weights)
+    Total size    = 22,208 (bytes) (All)
+  Latency:
+    Cycle estimation   = 61,665 (cycles) (NPU only)
+    Latency estimation = 0.411 (ms) (@ 150.000 MHz) (NPU only)
+========================================================================================================================
+Conversion time:
+  Optimization = 0.336651 (seconds)
+  Extraction   = 0.0342351 (seconds)
+  Generation   = 0.0428448 (seconds)
+  Total        = 0.413731 (seconds)
+========================================================================================================================

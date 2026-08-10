@@ -1,0 +1,23 @@
+{
+  "config": "train/configs/multiexit.yaml",
+  "model_kind": "multiexit",
+  "param_counts": {
+    "backbone": 93928,
+    "exit1_head": 1419,
+    "exit2_head": 1763,
+    "exit3_head_or_logits": 7611,
+    "total": 104721
+  },
+  "n_train_proper": 26219,
+  "n_val_slice": 3150,
+  "final_eval": {
+    "exit1_acc": 0.7266666889190674,
+    "exit1_loss": 0.9798202514648438,
+    "exit2_acc": 0.9006349444389343,
+    "exit2_loss": 0.4447002112865448,
+    "exit3_acc": 0.9088888764381409,
+    "exit3_loss": 0.5672954320907593,
+    "loss": 2.093236207962036
+  },
+  "epochs_trained": 100
+}

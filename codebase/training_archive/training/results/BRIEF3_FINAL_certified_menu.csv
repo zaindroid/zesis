@@ -1,0 +1,10 @@
+exit,alpha,tau_k,n_test,achieved_miss_rate,target_alpha,status
+exit1,0.01,,0,,0.01,NOT_CERTIFIABLE
+exit1,0.05,0.858,2928,0.0447,0.05,PASS
+exit1,0.10,0.723,4303,0.0904,0.10,PASS
+exit2,0.01,0.995,5795,0.0112,0.01,FAIL
+exit2,0.05,0.815,7530,0.0517,0.05,FAIL
+exit2,0.10,0.402,8399,0.0985,0.10,PASS
+exit3,0.01,1.000,2616,0.0027,0.01,PASS
+exit3,0.05,0.912,7730,0.0450,0.05,PASS
+exit3,0.10,0.000,8460,0.0887,0.10,PASS

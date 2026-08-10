@@ -1,0 +1,20 @@
+hello_world_primary_core:
+  boards:
+    frdmmcxn947@cm33_core0: []
+  contents:
+    document:
+      brief: The Multicore Hello World demo application demonstrates how to set up
+        projects for individual cores on a multicore system. In this demo, the primary
+        core prints the "Hello World from the Primary Core!"string to the terminal
+        and then releases the secondary core from the reset. The secondary core toggles
+        an on-board LED indicating that the secondary core is running.
+      category: multicore_examples
+      example_readme:
+      - examples/multicore_examples/hello_world/readme.md
+      - ${board_root}/${board}/multicore_examples/hello_world/example_board_readme.md
+      - ${board_root}/${board}/examples_shared_readme.md
+      name: hello_world_primary_core
+    meta_path: examples/multicore_examples/hello_world/primary
+    project-root-path: boards/${board}/multicore_examples/hello_world/${multicore_foldername}
+  section-type: freestanding_application
+  use_sysbuild: 'true'

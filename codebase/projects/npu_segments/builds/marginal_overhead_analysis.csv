@@ -1,0 +1,3 @@
+transition,n_dispatches_before,n_dispatches_after,marginal_overhead_us
+mono -> 2seg (split AB|C),1,2,582.84
+2seg -> 3seg (split A|B within AB),2,3,1125.62
