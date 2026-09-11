@@ -1,0 +1,8 @@
+
+PQM4_BEGIN alg=MLKEM level=768
+iter=0
+kp..ok enc..ok op,cycles,stack_hwm
+kp,3376902,0
+enc,3598518,0
+dec,0,0
+PQM4_END

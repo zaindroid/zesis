@@ -1,0 +1,33 @@
+item,us_per_op,source
+classical_AES-ECB-144,86.84,SecureMark-TLS
+classical_AES-ECB-224,132.01,SecureMark-TLS
+classical_AES-ECB-320,186.21,SecureMark-TLS
+classical_AES-CCM-52,144.53,SecureMark-TLS
+classical_AES-CCM-168,337.71,SecureMark-TLS
+classical_ECDH P-256,19676.13,SecureMark-TLS
+classical_ECDSA sign,34028.65,SecureMark-TLS
+classical_ECDSA verify,56201.88,SecureMark-TLS
+classical_SHA-256-23,10.68,SecureMark-TLS
+classical_SHA-256-57,25.23,SecureMark-TLS
+classical_SHA-256-384,157.69,SecureMark-TLS
+classical_variation-001,907.80,SecureMark-TLS
+classical_SHA-256-4224,297.26,SecureMark-TLS
+classical_AES-ECB-2048,1162.01,SecureMark-TLS
+mlkem512_kp,19856.22,mlkem_bench
+mlkem512_enc,23359.45,mlkem_bench
+mlkem512_dec,28949.81,mlkem_bench
+mlkem768_kp,32626.34,mlkem_bench
+mlkem768_enc,37949.76,mlkem_bench
+mlkem768_dec,45394.40,mlkem_bench
+mlkem1024_kp,50964.69,mlkem_bench
+mlkem1024_enc,57216.92,mlkem_bench
+mlkem1024_dec,66726.59,mlkem_bench
+mldsa44_kp,16587.63,mldsa_bench_nxp
+mldsa44_sign_med,43690.09,mldsa_bench_nxp
+mldsa44_verify,17562.11,mldsa_bench_nxp
+mldsa65_kp,29131.84,mldsa_bench_nxp
+mldsa65_sign_med,75743.42,mldsa_bench_nxp
+mldsa65_verify,29500.51,mldsa_bench_nxp
+mldsa87_kp,49212.93,mldsa_bench_nxp
+mldsa87_sign_med,99627.25,mldsa_bench_nxp
+mldsa87_verify,50318.21,mldsa_bench_nxp

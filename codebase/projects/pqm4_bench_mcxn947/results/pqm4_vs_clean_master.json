@@ -1,0 +1,25 @@
+{
+  "board": "FRDM-MCXN947 (Cortex-M33 @ 150 MHz)",
+  "clean_library": "PQClean clean",
+  "optimized_library": "pqm4 m4fspeed/m4f",
+  "measured": {
+    "MLKEM-512": {
+      "kp_speedup": 1.3867116607490881,
+      "enc_speedup": 1.584518207462785
+    },
+    "MLKEM-768": {
+      "kp_speedup": 1.4495007998398246,
+      "enc_speedup": 1.5819531972330858
+    },
+    "MLKEM-1024": {
+      "kp_speedup": 1.4801104753090781
+    }
+  },
+  "portability_limitations": [
+    "ML-KEM decap: m4f asm FAULTS on M33 (all levels)",
+    "ML-KEM-1024 enc: m4f asm FAULTS on M33",
+    "ML-KEM second call: HANGS after 1st kp+enc (state corruption in m4f asm)",
+    "ML-DSA kp/sign/verify: m4f asm FAULTS on M33 (all levels)"
+  ],
+  "conclusion": "pqm4 m4f delivers 1.45-1.58x speedup for the ops that run, but is NOT fully M33-portable: decap/ML-DSA fault. M4F-optimized PQC asm requires porting work for M33."
+}

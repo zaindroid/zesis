@@ -1,0 +1,25 @@
+{
+  "board": "FRDM-MCXN947 (Cortex-M33 @ 150MHz)",
+  "library": "pqm4 (M-profile optimized)",
+  "algorithm": "ML-KEM-768",
+  "variant": "m4fspeed",
+  "runs": 6,
+  "keypair_cycles_mean": 3376301,
+  "keypair_cycles_min": 3375668,
+  "keypair_cycles_max": 3376698,
+  "encaps_cycles_mean": 3598377,
+  "encaps_cycles_min": 3598169,
+  "encaps_cycles_max": 3598649,
+  "keypair_ms_mean": 22.51,
+  "encaps_ms_mean": 23.99,
+  "decap": "FAULTS on M33 (m4f asm) - documented portability limitation",
+  "second_call": "HANGS after 1st kp+enc (state corruption in m4f asm) - documented",
+  "vs_pqclean_clean": {
+    "keypair_x": 1.45,
+    "encaps_x": 1.58
+  },
+  "pqclean_clean_ref": {
+    "keypair_cycles": 4893951,
+    "encaps_cycles": 5692464
+  }
+}

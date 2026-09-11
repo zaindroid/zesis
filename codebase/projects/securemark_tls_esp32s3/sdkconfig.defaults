@@ -1,0 +1,28 @@
+# ESP32-S3 target
+CONFIG_IDF_TARGET="esp32s3"
+
+# 8 MB flash (typical ESP32-S3-DevKitC-1 with octal PSRAM)
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+
+# CPU
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+
+# Console: USB Serial/JTAG (board exposes only native USB)
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+
+# Main task stack: ECDSA/ECDH in mbedTLS need deep ECP stack frames
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=131072
+
+# Size optimization
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Keep logs quiet during timing
+CONFIG_LOG_DEFAULT_LEVEL_NONE=y
+
+# Benchmark runs long non-yielding timed loops: disable watchdogs
+CONFIG_ESP_TASK_WDT_EN=n
+CONFIG_ESP_TASK_WDT_INIT=n
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0=n
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1=n

@@ -1,0 +1,181 @@
+m-lap-us-8683726
+m-aes128_ecb-encrypt-finish
+Component #0zu ips=      11515.794 crc=0xc7b0 expected_crc=0xc7b0
+m-aes128_ecb-iterations-1
+m-aes128_ecb-message-length-224
+m-aes128_ecb-encrypt-start
+m-lap-us-8702330
+m-lap-us-8704048
+m-aes128_ecb-encrypt-finish
+m-aes128_ecb-iterations-80000
+m-aes128_ecb-message-length-224
+m-aes128_ecb-encrypt-start
+m-lap-us-0
+m-lap-us-10560527
+m-aes128_ecb-encrypt-finish
+Component #0zu ips=       7575.379 crc=0x5481 expected_crc=0x5481
+m-aes128_ecb-iterations-1
+m-aes128_ecb-message-length-320
+m-aes128_ecb-encrypt-start
+m-lap-us-10579738
+m-lap-us-10581596
+m-aes128_ecb-encrypt-finish
+m-aes128_ecb-iterations-60000
+m-aes128_ecb-message-length-320
+m-aes128_ecb-encrypt-start
+m-lap-us-0
+m-lap-us-11172661
+m-aes128_ecb-encrypt-finish
+Component #0zu ips=       5370.251 crc=0x998a expected_crc=0x998a
+m-aes128_ccm-iterations-1
+m-aes128_ccm-message-length-52
+m-aes128_ccm-encrypt-start
+m-lap-us-11192173
+m-lap-us-11193992
+m-aes128_ccm-encrypt-finish
+m-aes128_ccm-iterations-5000
+m-aes128_ccm-message-length-52
+m-aes128_ccm-encrypt-start
+m-lap-us-0
+m-lap-us-722663
+m-aes128_ccm-encrypt-finish
+Component #0zu ips=       6918.854 crc=0xd82d expected_crc=0xd82d
+m-aes128_ccm-iterations-1
+m-aes128_ccm-message-length-168
+m-aes128_ccm-encrypt-start
+m-aes128_ccm-encrypt-finish
+m-aes128_ccm-iterations-1
+m-aes128_ccm-message-length-168
+m-aes128_ccm-decrypt-start
+m-lap-us-751157
+m-lap-us-752991
+m-aes128_ccm-decrypt-finish
+m-aes128_ccm-iterations-1
+m-aes128_ccm-message-length-168
+m-aes128_ccm-encrypt-start
+m-aes128_ccm-encrypt-finish
+m-aes128_ccm-iterations-2000
+m-aes128_ccm-message-length-168
+m-aes128_ccm-decrypt-start
+m-lap-us-0
+m-lap-us-675411
+m-aes128_ccm-decrypt-finish
+Component #0zu ips=       2961.160 crc=0x005b expected_crc=0x005b
+m-ecdh-iterations-1
+m-ecdh-start
+m-lap-us-689337
+m-lap-us-767653
+m-ecdh-finish
+m-ecdh-iterations-500
+m-ecdh-start
+m-lap-us-0
+m-lap-us-9837984
+m-ecdh-finish
+Component #0zu ips=         50.823 crc=0xb659 expected_crc=0xb659
+m-ecdsa_sign-iterations-1
+m-ecdsa_sign-start
+m-lap-us-9879566
+m-lap-us-9914746
+m-ecdsa_sign-finish
+m-ecdsa_sign-iterations-300
+m-ecdsa_sign-start
+m-lap-us-0
+m-lap-us-10208681
+m-ecdsa_sign-finish
+Component #0zu ips=         29.387 crc=0x3a47 expected_crc=0x3a47
+m-ecdsa_sign-iterations-1
+m-ecdsa_sign-start
+m-ecdsa_sign-finish
+m-ecdsa_verify-iterations-1
+m-ecdsa_verify-start
+m-lap-us-10319570
+m-lap-us-10434853
+m-ecdsa_verify-finish
+m-ecdsa_sign-iterations-1
+m-ecdsa_sign-start
+m-ecdsa_sign-finish
+m-ecdsa_verify-iterations-500
+m-ecdsa_verify-start
+m-lap-us-0
+m-lap-us-28101588
+m-ecdsa_verify-finish
+Component #0zu ips=         17.793 crc=0x3a47 expected_crc=0x3a47
+m-sha256-iterations-1
+m-sha256-message-length-23
+m-sha256-start
+m-lap-us-28117377
+m-lap-us-28119073
+m-sha256-finish
+m-sha256-iterations-100000
+m-sha256-message-length-23
+m-sha256-start
+m-lap-us-0
+m-lap-us-1067907
+m-sha256-finish
+Component #0zu ips=      93641.117 crc=0x2151 expected_crc=0x2151
+m-sha256-iterations-1
+m-sha256-message-length-57
+m-sha256-start
+m-lap-us-1082880
+m-lap-us-1084515
+m-sha256-finish
+m-sha256-iterations-80000
+m-sha256-message-length-57
+m-sha256-start
+m-lap-us-0
+m-lap-us-2018420
+m-sha256-finish
+Component #0zu ips=      39634.961 crc=0x3b3c expected_crc=0x3b3c
+m-sha256-iterations-1
+m-sha256-message-length-384
+m-sha256-start
+m-lap-us-2033671
+m-lap-us-2035436
+m-sha256-finish
+m-sha256-iterations-40000
+m-sha256-message-length-384
+m-sha256-start
+m-lap-us-0
+m-lap-us-6307487
+m-sha256-finish
+Component #0zu ips=       6341.670 crc=0x1d3f expected_crc=0x1d3f
+m-variation-001-start
+m-lap-us-6319582
+m-lap-us-6322064
+m-variation-001-finish
+m-variation-001-start
+m-lap-us-0
+m-lap-us-90780
+m-variation-001-finish
+Component #0zu ips=       1101.564 crc=0x0000 expected_crc=0x0000
+m-sha256-iterations-1
+m-sha256-message-length-4224
+m-sha256-start
+m-lap-us-108655
+m-lap-us-111905
+m-sha256-finish
+m-sha256-iterations-20000
+m-sha256-message-length-4224
+m-sha256-start
+m-lap-us-0
+m-lap-us-5945171
+m-sha256-finish
+Component #0zu ips=       3364.075 crc=0x9284 expected_crc=0x9284
+m-aes128_ecb-iterations-1
+m-aes128_ecb-message-length-2048
+m-aes128_ecb-encrypt-start
+m-lap-us-5963239
+m-lap-us-5965987
+m-aes128_ecb-encrypt-finish
+m-aes128_ecb-iterations-5000
+m-aes128_ecb-message-length-2048
+m-aes128_ecb-encrypt-start
+m-lap-us-0
+m-lap-us-5810027
+m-aes128_ecb-encrypt-finish
+Component #0zu ips=        860.581 crc=0x989e expected_crc=0x989e
+SecureMark-TLS Score is 5472.076 marks
+Disclaimer: this is not an official score. In order to submit an
+official score, please contact support@eembc.org.
+
+=== SecureMark-TLS done rc=0 ===

@@ -1,0 +1,8 @@
+
+PQM4_BEGIN alg=MLDSA level=44
+kp..
+=== HardFault (M4F asm on M33) ===
+CFSR  =0x  100000  HFSR  =0x40000000
+MMFAR =0xE000ED34  BFAR  =0xE000ED38
+stacked PC=0x40000000  stacked LR=0xE000ED34
+  [FORCED] escalated to HardFault

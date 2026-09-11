@@ -260,7 +260,7 @@ void main(void)
     /* Delay so the USB Serial/JTAG CDC has time to attach on boards where
      * the console is USB-based (ESP32-S3 native USB). Without this the
      * early KEM/KP output is lost to the host attach race. */
-    k_msleep(3000);
+    k_msleep(15000);
     k_thread_create(&bench_thread, bench_stack, BENCH_STACK_SIZE,
                     run_bench, NULL, NULL, NULL,
                     CONFIG_NUM_PREEMPT_PRIORITIES - 1, 0, K_NO_WAIT);

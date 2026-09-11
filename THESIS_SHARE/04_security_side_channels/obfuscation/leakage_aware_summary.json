@@ -1,0 +1,42 @@
+{
+  "no_defense": {
+    "policy": "no_defense",
+    "misses": 6,
+    "total_ms": 4754.770000000008,
+    "total_mj": 271.83000000000015,
+    "n_real": 123,
+    "n_dummy": 0,
+    "attacker_naive_acc": 1.0,
+    "hidden_frac": 0.0
+  },
+  "fixed_dummy": {
+    "policy": "fixed_dummy",
+    "misses": 13,
+    "total_ms": 9470.88333333332,
+    "total_mj": 541.4499999999985,
+    "n_real": 123,
+    "n_dummy": 122,
+    "attacker_naive_acc": 0.5020408163265306,
+    "hidden_frac": 0.991869918699187
+  },
+  "deadline_aware": {
+    "policy": "deadline_aware",
+    "misses": 6,
+    "total_ms": 4754.770000000008,
+    "total_mj": 271.83000000000015,
+    "n_real": 123,
+    "n_dummy": 0,
+    "attacker_naive_acc": 1.0,
+    "hidden_frac": 0.0
+  },
+  "learned_obfusc": {
+    "policy": "learned_obfusc",
+    "misses": 6,
+    "total_ms": 4754.770000000008,
+    "total_mj": 271.83000000000015,
+    "n_real": 123,
+    "n_dummy": 0,
+    "attacker_naive_acc": 1.0,
+    "hidden_frac": 0.0
+  }
+}

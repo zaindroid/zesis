@@ -1,0 +1,126 @@
+{
+  "512": {
+    "no_defense": {
+      "policy": "no_defense",
+      "level": 512,
+      "misses": 0,
+      "total_ms": 2958.9700000000034,
+      "total_mj": 172.2000000000004,
+      "n_real": 123,
+      "n_dummy": 0,
+      "crypto_attacker_acc": 1.0,
+      "hidden_frac": 0.0,
+      "exit_leak_acc": 0.9829999999999711
+    },
+    "fixed_dummy": {
+      "policy": "fixed_dummy",
+      "level": 512,
+      "misses": 0,
+      "total_ms": 5893.883333333324,
+      "total_mj": 342.9999999999993,
+      "n_real": 123,
+      "n_dummy": 122,
+      "crypto_attacker_acc": 0.5020408163265306,
+      "hidden_frac": 0.991869918699187,
+      "exit_leak_acc": 0.9185615176151524
+    },
+    "probabilistic_p03": {
+      "policy": "probabilistic_p03",
+      "level": 512,
+      "misses": 0,
+      "total_ms": 3945.293333333344,
+      "total_mj": 229.60000000000062,
+      "n_real": 123,
+      "n_dummy": 41,
+      "crypto_attacker_acc": 0.75,
+      "hidden_frac": 0.3333333333333333,
+      "exit_leak_acc": 0.9613444444444171
+    },
+    "exit1_selective": {
+      "policy": "exit1_selective",
+      "level": 512,
+      "misses": 0,
+      "total_ms": 4209.916666666677,
+      "total_mj": 245.00000000000068,
+      "n_real": 123,
+      "n_dummy": 52,
+      "crypto_attacker_acc": 0.7028571428571428,
+      "hidden_frac": 0.42276422764227645,
+      "exit_leak_acc": 0.9555344173441463
+    },
+    "exit1_selective_hi": {
+      "policy": "exit1_selective_hi",
+      "level": 512,
+      "misses": 0,
+      "total_ms": 5893.883333333324,
+      "total_mj": 342.9999999999993,
+      "n_real": 123,
+      "n_dummy": 122,
+      "crypto_attacker_acc": 0.5020408163265306,
+      "hidden_frac": 0.991869918699187,
+      "exit_leak_acc": 0.9185615176151524
+    }
+  },
+  "768": {
+    "no_defense": {
+      "policy": "no_defense",
+      "level": 768,
+      "misses": 6,
+      "total_ms": 4754.770000000008,
+      "total_mj": 271.83000000000015,
+      "n_real": 123,
+      "n_dummy": 0,
+      "crypto_attacker_acc": 1.0,
+      "hidden_frac": 0.0,
+      "exit_leak_acc": 0.9829999999999711
+    },
+    "fixed_dummy": {
+      "policy": "fixed_dummy",
+      "level": 768,
+      "misses": 13,
+      "total_ms": 9470.88333333332,
+      "total_mj": 541.4499999999985,
+      "n_real": 123,
+      "n_dummy": 122,
+      "crypto_attacker_acc": 0.5020408163265306,
+      "hidden_frac": 0.991869918699187,
+      "exit_leak_acc": 0.9185615176151524
+    },
+    "probabilistic_p03": {
+      "policy": "probabilistic_p03",
+      "level": 768,
+      "misses": 8,
+      "total_ms": 6069.096666666677,
+      "total_mj": 346.96999999999946,
+      "n_real": 123,
+      "n_dummy": 34,
+      "crypto_attacker_acc": 0.7834394904458599,
+      "hidden_frac": 0.2764227642276423,
+      "exit_leak_acc": 0.9650417344173164
+    },
+    "exit1_selective": {
+      "policy": "exit1_selective",
+      "level": 768,
+      "misses": 9,
+      "total_ms": 6764.916666666679,
+      "total_mj": 386.7499999999991,
+      "n_real": 123,
+      "n_dummy": 52,
+      "crypto_attacker_acc": 0.7028571428571428,
+      "hidden_frac": 0.42276422764227645,
+      "exit_leak_acc": 0.9555344173441469
+    },
+    "exit1_selective_hi": {
+      "policy": "exit1_selective_hi",
+      "level": 768,
+      "misses": 13,
+      "total_ms": 9470.88333333332,
+      "total_mj": 541.4499999999985,
+      "n_real": 123,
+      "n_dummy": 122,
+      "crypto_attacker_acc": 0.5020408163265306,
+      "hidden_frac": 0.991869918699187,
+      "exit_leak_acc": 0.9185615176151524
+    }
+  }
+}

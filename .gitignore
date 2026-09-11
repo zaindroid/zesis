@@ -76,3 +76,19 @@ codebase/stm32/
 # OS
 Thumbs.db
 .DS_Store
+
+# Share-package raw data (305MB+, kept on disk, not in git)
+THESIS_SHARE/data/
+THESIS_RESULTS_SHARE/raw_data/
+# stray build logs
+/build_*.log
+
+# Vendored third-party clones + own nested repo (separate git histories;
+# their files stay on disk, excluded here to avoid broken gitlinks)
+codebase/PQClean/
+codebase/pqm4/
+codebase/securemark-tls/
+codebase/tflite-micro/
+codebase/wolfssl/
+codebase/esp-dl/
+proposal/

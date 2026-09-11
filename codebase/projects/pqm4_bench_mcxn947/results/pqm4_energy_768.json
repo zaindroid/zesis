@@ -1,0 +1,19 @@
+{
+  "capture": "ppk_m4f_kpenc_768.csv (H:/z_thesis/energy resulkts/)",
+  "board": "FRDM-MCXN947 (Cortex-M33 @ 150MHz), 3.3V assumed",
+  "workload": "ML-KEM-768 m4f keypair+encapsulate, reset-loop",
+  "windows": 794,
+  "window_ms_mean": 56.4,
+  "window_ms_std": 0.4,
+  "reset_gap_ms": 9.1,
+  "energy_per_window_mJ": 2.999,
+  "energy_per_window_std_mJ": 0.018,
+  "mean_power_mW": 53.2,
+  "compare_clean": {
+    "clean_kp_uJ": 1864.9,
+    "clean_enc_uJ": 2169.2,
+    "clean_kpenc_uJ": 4034.1,
+    "m4f_kpenc_uJ": 2999.0,
+    "energy_saving_pct": 25.65875907885278
+  }
+}

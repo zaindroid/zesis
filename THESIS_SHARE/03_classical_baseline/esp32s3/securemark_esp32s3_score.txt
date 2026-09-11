@@ -1,0 +1,15 @@
+Component #00 ips=       4617.227 crc=0xc7b0 expected_crc=0xc7b0
+Component #01 ips=       3108.326 crc=0x5481 expected_crc=0x5481
+Component #02 ips=       2177.642 crc=0x998a expected_crc=0x998a
+Component #03 ips=       3771.214 crc=0xd82d expected_crc=0xd82d
+Component #04 ips=       1662.694 crc=0x005b expected_crc=0x005b
+Component #05 ips=         12.522 crc=0xb659 expected_crc=0xb659
+Component #06 ips=         11.770 crc=0x3a47 expected_crc=0x3a47
+Component #07 ips=          6.054 crc=0x3a47 expected_crc=0x3a47
+Component #08 ips=     145038.734 crc=0x2151 expected_crc=0x2151
+Component #09 ips=      61000.906 crc=0x3b3c expected_crc=0x3b3c
+Component #10 ips=      49807.680 crc=0x1d3f expected_crc=0x1d3f
+Component #11 ips=       2968.769 crc=0x0000 expected_crc=0x0000
+Component #12 ips=      17657.410 crc=0x9284 expected_crc=0x9284
+Component #13 ips=        340.823 crc=0x989e expected_crc=0x989e
+SecureMark-TLS Score is 1895.064 marks
