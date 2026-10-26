@@ -1,0 +1,139 @@
+          0.415
+64 TLSv1.3_Heavy_CCM ecdsa_verify_p384r1       ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 TLSv1.2           aes128_ecb_encrypt               2818.753
+ 2 TLSv1.2           aes128_ecb_encrypt               1859.657
+ 3 TLSv1.2           aes128_ecb_encrypt               1320.492
+ 4 TLSv1.2           aes128_ccm_encrypt               4453.415
+ 5 TLSv1.2           aes128_ccm_decrypt               2125.367
+ 6 TLSv1.2           ecdh_p256r1                         6.028
+ 7 TLSv1.2           ecdsa_sign_p256r1                  10.333
+ 8 TLSv1.2           ecdsa_verify_p256r1                 5.368
+ 9 TLSv1.2           sha256                           5825.468
+10 TLSv1.2           sha256                           2991.623
+11 TLSv1.2           sha256                            872.326
+12 TLSv1.2           variation_001                     188.933
+13 TLSv1.2           sha256                             91.747
+14 TLSv1.2           aes128_ecb_encrypt                212.342
+15 TLSv1.3_Light     sha256                           2993.055
+16 TLSv1.3_Light     sha256                           2993.593
+17 TLSv1.3_Light     sha256                           2991.682
+18 TLSv1.3_Light     sha256_multi                      358.701
+19 TLSv1.3_Light     chachapoly_encrypt_multi          528.273
+20 TLSv1.3_Light     chachapoly_decrypt_multi          460.763
+21 TLSv1.3_Light     ecdsa_sign_ed25519                 21.894
+22 TLSv1.3_Light     ecdsa_verify_ed25519                6.483
+23 TLSv1.3_Light     ecdh_x25519                         7.466
+26 Boot_Light        sha256                            186.124
+31 TLSv1.3_Med_CCM   sha256                           2993.055
+32 TLSv1.3_Med_CCM   sha256                           2993.593
+33 TLSv1.3_Med_CCM   sha256                           2991.682
+34 TLSv1.3_Med_CCM   sha256_multi                      380.771
+35 TLSv1.3_Med_CCM   aes128_ccm_encrypt_multi          873.148
+36 TLSv1.3_Med_CCM   aes128_ccm_decrypt_multi          723.760
+37 TLSv1.3_Med_CCM   ecdsa_sign_p256r1                  10.333
+38 TLSv1.3_Med_CCM   ecdsa_verify_p256r1                 5.368
+39 TLSv1.3_Med_CCM   ecdh_p256r1                         6.028
+40 TLSv1.3_Med_CCM   sha256                           2014.423
+41 TLSv1.3_Med_GCM   sha256                           2993.055
+42 TLSv1.3_Med_GCM   sha256                           2993.593
+43 TLSv1.3_Med_GCM   sha256                           2991.682
+44 TLSv1.3_Med_GCM   sha256_multi                      380.771
+45 TLSv1.3_Med_GCM   aes128_gcm_encrypt_multi          240.253
+46 TLSv1.3_Med_GCM   aes128_gcm_decrypt_multi          199.330
+47 TLSv1.3_Med_GCM   ecdsa_sign_p256r1                  10.333
+48 TLSv1.3_Med_GCM   ecdsa_verify_p256r1                 5.368
+49 TLSv1.3_Med_GCM   ecdh_p256r1                         6.028
+50 TLSv1.3_Med_GCM   sha256                           2014.423
+52 Boot_Med_RSA      sha256                            186.124
+53 Boot_Med_RSA      rsa_verify_2048                     9.456
+55 Boot_Med_ECC      sha256                            186.124
+56 Boot_Med_ECC      ecdsa_verify_p256r1                 5.368
+57 TLSv1.3_Heavy_CCM sha384                            841.958
+58 TLSv1.3_Heavy_CCM sha384                            841.769
+59 TLSv1.3_Heavy_CCM sha384                            841.769
+60 TLSv1.3_Heavy_CCM sha384_multi                      169.638
+61 TLSv1.3_Heavy_CCM aes256_ccm_encrypt_multi          573.052
+62 TLSv1.3_Heavy_CCM aes256_ccm_decrypt_multi          490.739
+63 TLSv1.3_Heavy_CCM ecdsa_sign_p384r1                   0.415
+64 TLSv1.3_Heavy_CCM ecdsa_verify_p384r1                 0.570
+65 TLSv1.3_Heavy_CCM ecdh_p384r1               e-[th_ecdh_calc_secret: error: -236]
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Cÿ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                 e-[MakeKey -173]
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                 e-[MakeKey -173]
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                 e-[MakeKey -173]
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Comð---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                 e-[MakeKey -173]
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                 e-[MakeKey -173]

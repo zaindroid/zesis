@@ -1,0 +1,39 @@
+{
+ "duration_ms_by_class": {
+  "0": {
+   "mean": 50.58,
+   "min": 12.3,
+   "max": 51.4,
+   "std": 3.72
+  },
+  "1": {
+   "mean": 57.27,
+   "min": 54.3,
+   "max": 57.7,
+   "std": 0.27
+  },
+  "2": {
+   "mean": 67.61,
+   "min": 66.7,
+   "max": 210.9,
+   "std": 10.65
+  }
+ },
+ "duration_only_cv": 0.9982,
+ "random_5fold_shape": 0.9927,
+ "temporal_70_30": 1.0,
+ "blocked_5fold": 0.9927,
+ "blocked_5fold_folds": [
+  0.9909,
+  0.9818,
+  0.9909,
+  1.0,
+  1.0
+ ],
+ "middle50_random_5fold": 0.9927,
+ "middle50_temporal": 1.0,
+ "zscored_shape_temporal": 1.0,
+ "zscored_shape_random": 0.9909,
+ "mlp_temporal": 0.3333,
+ "mlp_random": 0.3327
+}

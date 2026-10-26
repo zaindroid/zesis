@@ -1,0 +1,68 @@
+Multi-exit GTSRB model - layer summary
+Rebuilt from models/architectures.py; total verified against the
+checkpoint best_joint.weights.h5 (layers group = 104,721 params).
+
+Input 48x48x3 INT8 | 43 classes | exits at blocks 3/6/10 = 30/60/100%
+
+#     layer            output           stride     params
+----------------------------------------------------------
+1     stem_conv        24x24x16         2             432
+2     stem_bn          24x24x16         -              64
+3     block1_dw        24x24x16         1             144
+4     block1_dwbn      24x24x16         1              64
+5     block1_pw        24x24x16         1             256
+6     block1_pwbn      24x24x16         1              64
+7     block2_dw        12x12x16         2             144
+8     block2_dwbn      12x12x16         1              64
+9     block2_pw        12x12x32         1             512
+10    block2_pwbn      12x12x32         1             128
+11    block3_dw        12x12x32         1             288
+12    block3_dwbn      12x12x32         1             128
+13    block3_pw        12x12x32         1           1,024
+14    block3_pwbn      12x12x32         1             128
+15    block4_dw        6x6x32           2             288
+16    block4_dwbn      6x6x32           1             128
+17    block4_pw        6x6x40           1           1,280
+18    block4_pwbn      6x6x40           1             160
+19    block5_dw        6x6x40           1             360
+20    block5_dwbn      6x6x40           1             160
+21    block5_pw        6x6x40           1           1,600
+22    block5_pwbn      6x6x40           1             160
+23    block6_dw        6x6x40           1             360
+24    block6_dwbn      6x6x40           1             160
+25    block6_pw        6x6x40           1           1,600
+26    block6_pwbn      6x6x40           1             160
+27    block7_dw        6x6x40           1             360
+28    block7_dwbn      6x6x40           1             160
+29    block7_pw        6x6x64           1           2,560
+30    block7_pwbn      6x6x64           1             256
+31    block8_dw        3x3x64           2             576
+32    block8_dwbn      3x3x64           1             256
+33    block8_pw        3x3x176          1          11,264
+34    block8_pwbn      3x3x176          1             704
+35    block9_dw        3x3x176          1           1,584
+36    block9_dwbn      3x3x176          1             704
+37    block9_pw        3x3x176          1          30,976
+38    block9_pwbn      3x3x176          1             704
+39    block10_dw       3x3x176          1           1,584
+40    block10_dwbn     3x3x176          1             704
+41    block10_pw       3x3x176          1          30,976
+42    block10_pwbn     3x3x176          1             704
+43    exit1_gap        12x32            -               0
+44    exit1            43               -           1,419
+45    exit2_gap        6x40             -               0
+46    exit2            43               -           1,763
+47    exit3_gap        3x176            -               0
+48    exit3            43               -           7,611
+----------------------------------------------------------
+backbone:   93,928
+exit heads: 10,793
+TOTAL:      104,721   (matches the checkpoint exactly)
+
+Device sizes, INT8 per-channel PTQ:
+  segA  (exit1, stage A)    16,736 B
+  segB  (stage B)           21,168 B
+  segC  (stage C)          125,896 B
+  full 3-exit model        158,144 B
+
+Validation accuracy: exit1 0.733 | exit2 0.923 | exit3 0.931 | baseline 0.945

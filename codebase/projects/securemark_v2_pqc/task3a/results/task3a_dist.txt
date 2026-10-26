@@ -1,0 +1,26 @@
+ML-DSA-44-pure keygen,sign,prehash,verify ms=14493,155722,0,133096  sig_bytes=2420  pk_bytes=1312  verify_result=PASS
+ML-DSA-44-pure sign_ms mean/min/max=155722/137419/217141  verify_ms mean/min/max=133096/133096/133101  n=20
+ML-DSA-44-pure end_to_end_ms=133096
+ML-DSA-44-pure RAM: buffered=131072 B (whole payload addressable) + sig 2420 B + pk 1312 B
+
+=== Task 3A: 128 KB firmware signature verification ===
+plat,mcxn947,cpu_hz=150000000,fw_bytes=131072
+wc_InitRng rc=0
+streaming ctx bytes: SHA-256=112 SHA-512=224 chunk=4096
+ECDSA-P256 prehash,sign,verify ms=44230,16932,26700  sig_bytes=72  verify_result=PASS
+ECDSA-P256 sign_ms mean/min/max=16932/16932/16933  verify_ms mean/min/max=26700/26700/26701  n=20
+ECDSA-P256 end_to_end_ms=70930
+ECDSA-P256 RAM: buffered=0 (streamed in 4096 B chunks) + digest 32 B + sig 72 B
+ML-DSA-44-pure keygen,sign,prehash,verify ms=14493,155722,0,133096  sig_bytes=2420  pk_bytes=1312  verify_result=PASS
+ML-DSA-44-pure sign_ms mean/min/max=155722/137419/217141  verify_ms mean/min/max=133096/133096/133101  n=20
+ML-DSA-44-pure end_to_end_ms=133096
+ML-DSA-44-pure RAM: buffered=131072 B (whole payload addressable) + sig 2420 B + pk 1312 B
+ML-DSA-65-pure keygen,sign,prehash,verify ms=25098,179470,0,143125  sig_bytes=3309  pk_bytes=1952  verify_result=PASS
+ML-DSA-65-pure sign_ms mean/min/max=179470/148752/318184  verify_ms mean/min/max=143125/143125/143130  n=20
+ML-DSA-65-pure end_to_end_ms=143125
+ML-DSA-65-pure RAM: buffered=131072 B (whole payload addressable) + sig 3309 B + pk 1952 B
+HashML-DSA-65 keygen,sign,prehash,verify ms=25090,55298,85340,24448  sig_bytes=3309  pk_bytes=1952  verify_result=PASS
+HashML-DSA-65 sign_ms mean/min/max=55298/30078/107907  verify_ms mean/min/max=24448/24448/24452  n=20
+HashML-DSA-65 end_to_end_ms=109788
+HashML-DSA-65 RAM: buffered=0 (streamed in 4096 B chunks) + digest 64 B + sig 3309 B + pk 1952 B
+BENCH_COMPLETE

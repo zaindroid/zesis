@@ -1,0 +1,26 @@
+
+=== standalone PQC bench (wolfSSL native) ===
+plat,mcxn947,cpu_hz=150000000
+wc_InitRng rc=0 (deterministic CUSTOM_RAND_GENERATE_BLOCK)
+ML-KEM-512 KEM keypair,enc,dec cycles=2614832,2244751,3036467 us=17432,14965,20243
+ML-KEM-512 SELF-CHECK: PASS  (ct=768 ss=32)
+ML-KEM-512 PQC-CRC: 0xBB6188B7  [synthesized regression checksum over ct||ss; no EEMBC upstream reference]
+ML-KEM-768 KEM keypair,enc,dec cycles=4202657,3785493,4911268 us=28017,25236,32741
+ML-KEM-768 SELF-CHECK: PASS  (ct=1088 ss=32)
+ML-KEM-768 PQC-CRC: 0x8A48D4A5  [synthesized regression checksum over ct||ss; no EEMBC upstream reference]
+ML-KEM-1024 KEM keypair,enc,dec cycles=6615095,6008346,7475491 us=44100,40055,49836
+ML-KEM-1024 SELF-CHECK: PASS  (ct=1568 ss=32)
+ML-KEM-1024 PQC-CRC: 0xFDB3B688  [synthesized regression checksum over ct||ss; no EEMBC upstream reference]
+ML-DSA-44 keypair,sign,verify cycles=9954295,24832664,10454351 us=66361,165551,69695
+ML-DSA-44 SELF-CHECK: PASS  (sig=2420)
+ML-DSA-44 PQC-CRC: 0xBA561067  [synthesized regression checksum over sig; no EEMBC upstream reference]
+ML-DSA-65 keypair,sign,verify cycles=16980129,29814908,17342992 us=113200,198766,115619
+ML-DSA-65 SELF-CHECK: PASS  (sig=3309)
+ML-DSA-65 PQC-CRC: 0x1EE8F069  [synthesized regression checksum over sig; no EEMBC upstream reference]
+ML-DSA-87 keypair,sign,verify cycles=28901918,38131444,29271024 us=192679,254209,195140
+ML-DSA-87 SELF-CHECK: PASS  (sig=4627)
+ML-DSA-87 PQC-CRC: 0xAB6329B9  [synthesized regression checksum over sig; no EEMBC upstream reference]
+HashML-DSA-65 keypair,sign,verify cycles=16980129,35274842,17267117 us=113200,235165,115114
+HashML-DSA-65 SELF-CHECK: PASS  (sig=3309)
+HashML-DSA-65 PQC-CRC: 0x9C084B80  [synthesized regression checksum over sig; no EEMBC upstream reference]
+BENCH_COMPLETE

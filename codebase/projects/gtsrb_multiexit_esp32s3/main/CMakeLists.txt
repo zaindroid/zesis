@@ -11,7 +11,15 @@ set_property(CACHE MLDSA_BENCH PROPERTY STRINGS 0 1)
 set(MLDSA_LEVEL "44" CACHE STRING "ML-DSA level for benchmark: 44/65/87")
 set_property(CACHE MLDSA_LEVEL PROPERTY STRINGS 44 65 87)
 
-if(MLDSA_BENCH STREQUAL "1")
+# Per-exit on-device perception timing (seg_timing.cpp + segments.cpp only).
+set(SEG_TIMING "0" CACHE STRING "Build the per-exit segment timing mode")
+set_property(CACHE SEG_TIMING PROPERTY STRINGS 0 1)
+
+if(SEG_TIMING STREQUAL "1")
+  set(MAIN_SRCS "seg_timing.cpp" "segments.cpp")
+  set(MAIN_REQUIRES "tflite-micro" "esp_timer")
+  set(MAIN_INCDIRS "." "models")
+elseif(MLDSA_BENCH STREQUAL "1")
   set(PQC_DIR "${CMAKE_CURRENT_LIST_DIR}/../components/pqc_ml_dsa")
   set(MLDSA_DIR "${PQC_DIR}/ml-dsa-${MLDSA_LEVEL}")
   set(MAIN_SRCS

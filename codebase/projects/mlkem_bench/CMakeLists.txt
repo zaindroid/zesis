@@ -47,3 +47,7 @@ option(MLKEM_ACTIVITY_MODE "Build the activity-leakage capture firmware variant"
 if(MLKEM_ACTIVITY_MODE)
   mcux_add_macro(CC "-DACTIVITY_MODE")
 endif()
+# Methodology: compile at -O2 (overrides the SDK release preset's -Os) so the
+# PQClean reference tier is at the same optimisation level as the wolfSSL and
+# harness numbers.
+target_compile_options(${MCUX_SDK_PROJECT_NAME} PRIVATE -O2)

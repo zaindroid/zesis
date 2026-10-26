@@ -41,3 +41,7 @@ mcux_add_macro(CC "-DMLDSA_LEVEL=${MLDSA_LEVEL}")
 # ML-DSA sign() needs ~120KB peak stack (mat[K][L] arrays); the SDK default is
 # 32KB. Grow the linker stack region to 128KB via the standard __stack_size__ hook.
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--defsym=__stack_size__=0x20000")
+
+# Methodology: compile at -O2 (overrides the SDK release preset's -Os) so the
+# PQClean ML-DSA reference is at the same level as the wolfSSL/harness numbers.
+target_compile_options(${MCUX_SDK_PROJECT_NAME} PRIVATE -O2)

@@ -1,0 +1,22 @@
+# train/configs/multiexit.yaml
+seed: 20260728
+model: multiexit
+
+batch_size: 128
+epochs: 100
+learning_rate: 0.001
+
+# Fraction of TRAIN tracks (not calibration/test) held out, track-aware, for
+# per-exit accuracy monitoring during training. See train/train.py's
+# track_aware_holdout() docstring.
+val_track_fraction: 0.1
+
+# BranchyNet joint loss: L = sum_k w_k * CE(exit_k). Equal weights first,
+# per the brief -- revisit if the accuracy spread needs rebalancing later.
+exit_loss_weights:
+  exit1: 1.0
+  exit2: 1.0
+  exit3: 1.0
+
+checkpoint_dir: results/checkpoints/multiexit
+log_dir: results/logs/multiexit

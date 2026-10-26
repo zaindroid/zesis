@@ -1,0 +1,17 @@
+Computing suite scores...
+
+Suite                         Score
+----------------- -----------------
+PQC_All                    2068.402
+TLSv1.2                   10418.526
+TLSv1.3_Light               251.907
+Boot_Light                   70.419
+TLSv1.3_Med_CCM             100.576
+TLSv1.3_Med_GCM             100.162
+Boot_Med_RSA                 38.160
+Boot_Med_ECC                 24.572
+TLSv1.3_Heavy_CCM             4.127
+TLSv1.3_Heavy_GCM             4.124
+Boot_Heavy_RSA               10.408
+Boot_Heavy_ECC                1.178
+

@@ -92,3 +92,34 @@ codebase/tflite-micro/
 codebase/wolfssl/
 codebase/esp-dl/
 proposal/
+
+# --- build output (large, rebuildable) ---
+codebase/projects/securemark_v2_pqc/bench/release/
+codebase/projects/securemark_v2_pqc/bench/debug/
+codebase/projects/securemark_v2_pqc/v2harness/release/
+codebase/projects/securemark_v2_pqc/v2harness/debug/
+codebase/projects/securemark_v2_pqc/task3a/release/
+codebase/projects/securemark_v2_pqc/task3a/debug/
+codebase/projects/securemark_v2_pqc/wolfssl-m33/build/
+codebase/projects/mldsa_bench_nxp/b44/
+codebase/projects/mldsa_bench_nxp/b65o2/
+codebase/projects/mldsa_bench_nxp/b87/
+codebase/projects/mlkem_bench/o2/
+
+# --- upstream EEMBC clone (has its own .git; clone it, don't vendor it) ---
+codebase/securemark-v2/
+
+# --- office lock files and stray logs ---
+~$*
+*.log
+
+# --- keep the small result images even though *.png is ignored above ---
+!MODEL_FILES/*.png
+!codebase/training_archive/training/results/plots/*.png
+
+# raw serial captures over a few MB (reproducible by re-running; the distilled
+# native_scores.txt / pqc_denoised.txt / SUMMARY.csv are kept instead)
+codebase/projects/securemark_v2_pqc/v2harness/results/pqc_o2.txt
+
+# agent/tooling config (not thesis content)
+.agents/

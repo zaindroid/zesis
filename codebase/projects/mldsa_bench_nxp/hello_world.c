@@ -72,7 +72,8 @@
 
 #define N_SIGN 2000
 #define N_DET 100
-#define MSG_LEN 32
+/* Task 3B: 256-byte device-to-infrastructure telemetry frame (was 32 B). */
+#define MSG_LEN 256
 
 /* Result buffers in RAM (dumped only after the timed loop). */
 static uint32_t s_sign_cycles[N_SIGN];

@@ -1,0 +1,197 @@
+       2993.593
+37 TLSv1.3_Light     sha256                    ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                       [pqc] crc32=0xd0c1d687 self-check=PASS
+         56.863
+ 2 PQC_All           kem512_enc                      [pqc] crc32=0x7ccf8846 self-check=FAIL
+         66.875
+ 3 PQC_All           kem512_dec                      [pqc] crc32=0x9f5f9cec self-check=PASS
+         49.427
+ 4 PQC_All           kem768_kp                       [pqc] crc32=0xf95b975c self-check=PASS
+         35.730
+ 5 PQC_All           kem768_enc                      [pqc] crc32=0xb2ea5b2f self-check=FAIL
+         39.658
+ 6 PQC_All           kem768_dec                      [pqc] crc32=0x9bcea716 self-check=PASS
+         30.571
+ 7 PQC_All           kem1024_kp                      [pqc] crc32=0x1efa793c self-check=PASS
+         22.689
+ 8 PQC_All           kem1024_enc                     [pqc] crc32=0x0994c343 self-check=FAIL
+         24.988
+ 9 PQC_All           kem1024_dec                     [pqc] crc32=0xc94d4a71 self-check=PASS
+         20.087
+10 PQC_All           dsa44_kp                        [pqc] crc32=0x41448c62 self-check=PASS
+         15.134
+11 PQC_All           dsa44_sign                      [pqc] crc32=0xfb90da91 self-check=FAIL
+          6.132
+12 PQC_All           dsa44_ver                       [pqc] crc32=0xba561067 self-check=PASS
+         14.406
+13 PQC_All           dsa65_kp                        [pqc] crc32=0xeb7ea7b8 self-check=PASS
+          8.873
+14 PQC_All           dsa65_sign                      [pqc] crc32=0x4fc37cb0 self-check=FAIL
+          3.377
+15 PQC_All           dsa65_ver                       [pqc] crc32=0x1ee8f069 self-check=PASS
+          8.684
+16 PQC_All           dsa87_kp                        [pqc] crc32=0x2824d834 self-check=PASS
+          5.213
+17 PQC_All           dsa87_sign                      [pqc] crc32=0x52150de5 self-check=FAIL
+          1.921
+18 PQC_All           dsa87_ver                       [pqc] crc32=0xab6329b9 self-check=PASS
+          5.145
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0xc450e0fa self-check=FAIL
+          3.395
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+          8.722
+21 TLSv1.2           aes128_ecb_encrypt               2822.571
+22 TLSv1.2           aes128_ecb_encrypt               1861.318
+23 TLSv1.2           aes128_ecb_encrypt               1321.329
+24 TLSv1.2           aes128_ccm_encrypt               4505.178
+25 TLSv1.2           aes128_ccm_decrypt               2120.020
+26 TLSv1.2           ecdh_p256r1                         6.029
+27 TLSv1.2           ecdsa_sign_p256r1                  10.340
+28 TLSv1.2           ecdsa_verify_p256r1                 5.370
+29 TLSv1.2           sha256                           5825.468
+30 TLSv1.2           sha256                           2991.623
+31 TLSv1.2           sha256                            872.326
+32 TLSv1.2           variation_001                     188.927
+33 TLSv1.2           sha256                             91.747
+34 TLSv1.2           aes128_ecb_encrypt        ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- --------í---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                       [pqc] crc32=0x62bbeb8f self-check=PASS
+         56.864
+ 2 PQC_All           kem512_enc                      [pqc] crc32=0xbb6188b7 self-check=PASS
+         66.875
+ 3 PQC_All           kem512_dec                      [pqc] crc32=0x9f5f9cec self-check=PASS
+         49.427
+ 4 PQC_All           kem768_kp                       [pqc] crc32=0x90501e72 self-check=PASS
+         35.730
+ 5 PQC_All           kem768_enc                      [pqc] crc32=0x8a48d4a5 self-check=PASS
+         39.659
+ 6 PQC_All           kem768_dec                      [pqc] crc32=0x9bcea716 self-check=PASS
+         30.571
+ 7 PQC_All           kem1024_kp                      [pqc] crc32=0xfcb38031 self-check=PASS
+         22.689
+ 8 PQC_All           kem1024_enc                     [pqc] crc32=0xfdb3b688 self-check=PASS
+         24.988
+ 9 PQC_All           kem1024_dec                     [pqc] crc32=0xc94d4a71 self-check=PASS
+         20.088
+10 PQC_All           dsa44_kp                        [pqc] crc32=0xa3e2b62a self-check=PASS
+         15.134
+11 PQC_All           dsa44_sign                      [pqc] crc32=0xba561067 self-check=PASS
+          6.132
+12 PQC_All           dsa44_ver                       [pqc] crc32=0xba561067 self-check=PASS
+         14.406
+13 PQC_All           dsa65_kp                        [pqc] crc32=0x24eb962b self-check=PASS
+          8.872
+14 PQC_All           dsa65_sign                      [pqc] crc32=0x1ee8f069 self-check=PASS
+          3.377
+15 PQC_All           dsa65_ver                       [pqc] crc32=0x1ee8f069 self-check=PASS
+          8.684
+16 PQC_All           dsa87_kp                        [pqc] crc32=0x58bf68d4 self-check=PASS
+          5.212
+17 PQC_All           dsa87_sign                      [pqc] crc32=0xab6329b9 self-check=PASS
+          1.921
+18 PQC_All           dsa87_ver                       [pqc] crc32=0xab6329b9 self-check=PASS
+          5.145
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0x9c084b80 self-check=PASS
+          3.395
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+          8.722
+21 TLSv1.2           aes128_ecb_encrypt               2822.571
+22 TLSv1.2           aes128_ecb_encrypt               1861.318
+23 TLSv1.2           aes128_ecb_encrypt               1321.329
+24 TLSv1.2           aes128_ccm_encrypt               4505.178
+25 TLSv1.2           aes128_ccm_decrypt               2122.030
+26 TLSv1.2           ecdh_p256r1                         6.029
+27 TLSv1.2           ecdsa_sign_p256r1                  10.340
+28 TLSv1.2           ecdsa_verify_p256r1                 5.370
+29 TLSv1.2           sha256                           5825.468
+30 TLSv1.2           sha256                           2991.623
+31 TLSv1.2           sha256                            872.326
+32 TLSv1.2           variation_001             ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                       [pqc] crc32=0x62bbeb8f self-check=PASS
+         56.864
+ 2 PQC_All           kem512_enc                      [pqc] crc32=0xbb6188b7 self-check=PASS
+         66.875
+ 3 PQC_All           kem512_dec                      [pqc] crc32=0x9f5f9cec self-check=PASS
+         49.427
+ 4 PQC_All           kem768_kp                       [pqc] crc32=0x90501e72 self-check=PASS
+         35.730
+ 5 PQC_All           kem768_enc                      [pqc] crc32=0x8a48d4a5 self-check=PASS
+         39.659
+ 6 PQC_All           kem768_dec                      [pqc] crc32=0x9bcea716 self-check=PASS
+         30.571
+ 7 PQC_All           kem1024_kp                      [pqc] crc32=0xfcb38031 self-check=PASS
+         22.689
+ 8 PQC_All           kem1024_enc                     [pqc] crc32=0xfdb3b688 self-check=PASS
+         24.988
+ 9 PQC_All           kem1024_dec                     [pqc] crc32=0xc94d4a71 self-check=PASS
+         20.088
+10 PQC_All           dsa44_kp                        [pqc] crc32=0xa3e2b62a self-check=PASS
+         15.134
+11 PQC_All           dsa44_sign                      [pqc] crc32=0xba561067 self-check=PASS
+          6.132
+12 PQC_All           dsa44_ver                       [pqc] crc32=0xba561067 self-check=PASS
+         14.406
+13 PQC_All           dsa65_kp                        [pqc] crc32=0x24eb962b self-check=PASS
+          8.872
+14 PQC_All           dsa65_sign                      [pqc] crc32=0x1ee8f069 self-check=PASS
+          3.377
+15 PQC_All           dsa65_ver                       [pqc] crc32=0x1ee8f069 self-check=PASS
+          8.684
+16 PQC_All           dsa87_kp                        [pqc] crc32=0x58bf68d4 self-check=PASS
+          5.212
+17 PQC_All           dsa87_sign                      [pqc] crc32=0xab6329b9 self-check=PASS
+          1.921
+18 PQC_All           dsa87_ver                       [pqc] crc32=0xab6329b9 self-check=PASS
+          5.145
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0x9c084b80 self-check=PASS
+          3.395
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+          8.722
+21 TLSv1.2           aes128_ecb_encrypt               2822.571
+22 TLSv1.2           aes128_ecb_encrypt               1861.318
+23 TLSv1.2           aes128_ecb_encrypt               1321.329
+24 TLSv1.2           aes128_ccm_encrypt               4505.178
+25 TLSv1.2           aes128_ccm_decrypt               2122.030
+26 TLSv1.2           ecdh_p256r1                         6.029
+27 TLSv1.2           ecdsa_sign_p256r1                  10.340
+28 TLSv1.2           ecdsa_verify_p256r1                 5.370
+29 TLSv1.2           sha256                           5825.468
+30 TLSv1.2           sha256                           2991.623
+31 TLSv1.2           sha256                            872.326
+32 TLSv1.2           variation_001                     188.967
+33 TLSv1.2           sha256                    

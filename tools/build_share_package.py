@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
-"""Build the clean, shareable THESIS_SHARE/ package.
-
-Organizes reports + results + raw captures by experiment -> board -> results,
-renames PPK2 and serial captures descriptively, and writes a manifest.
-The working codebase is NOT modified (builds stay intact); this package is
-the share-with-professor artifact. Firmware projects are indexed via the
-code/ README (they are SDK-tangled and not portable as copies).
-"""
+"""Build the clean, shareable THESIS_SHARE/ package."""
 import os, shutil, json, sys
 
 SRC = r"H:\z_thesis"
@@ -187,7 +180,7 @@ add("energy resulkts/ppk_v33.csv", f"{D}/energy_voltage_3p3V_mcxn947.csv")
 add("energy resulkts/ppk_v27.csv", f"{D}/energy_voltage_2p7V_mcxn947.csv")
 add("energy resulkts/ppk_v24.csv", f"{D}/energy_voltage_2p4V_mcxn947.csv")
 add("energy resulkts/ppk_v22.csv", f"{D}/energy_voltage_2p2V_mcxn947.csv")
-add("energy resulkts/ppk-20260808T132908_deepcode_learned.csv",
+add("energy resulkts/ppk-20260808T132908_learned.csv",
     f"{D}/energy_interleaved_learned_mcxn947.csv")
 add("energy resulkts/ppk-20260809T090023_raw_with_p0_31.csv",
     f"{D}/energy_mlkem1024_activity_trigger_mcxn947.csv")

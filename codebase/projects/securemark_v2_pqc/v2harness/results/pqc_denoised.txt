@@ -1,0 +1,127 @@
+         90.238
+ 8 PQC_All           kem1024_enc                     [pqc] crc32=0xfdb3b688 self-check=PASS
+         98.601
+ 9 PQC_All           kem1024_dec                     [pqc] crc32=0xc94d4a71 self-check=PASS
+         79.603
+10 PQC_All           dsa44_kp                        [pqc] crc32=0xa3e2b62a self-check=PASS
+         68.962
+11 PQC_All           dsa44_sign                      [pqc] crc32=0xba561067 self-check=PASS
+         27.860
+12 PQC_All           dsa44_ver                       [pqc] crc32=0xba561067 self-check=PASS
+         68.808
+13 PQC_All           dsa65_kp                        [pqc] crc32=0x24eb962b self-check=PASS
+         39.797
+14 PQC_All           dsa65_sign                      [pqc] crc32=0x1ee8f069 self-check=PASS
+         16.566
+15 PQC_All           dsa65_ver                       [pqc] crc32=0x1ee8f069 self-check=PASS
+         40.694
+16 PQC_All           dsa87_kp                        [pqc] crc32=0x58bf68d4 self-check=PASS
+         23.126
+17 PQC_All           dsa87_sign                      [pqc] crc32=0xab6329b9 self-check=PASS
+         12.465
+18 PQC_All           dsa87_ver                       [pqc] crc32=0xab6329b9 self-check=PASS
+         23.575
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0x9c084b80 self-check=PASS
+         17.960
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+         40.904
+21 TLSv1.2           aes128_ecb_encrypt               7245.326
+22 TLSv1.2           aes128_ecb_encrypt               4763.114
+23 TLSv1.2           aes128_ecb_encrypt               3385.393
+24 TLSv1.2           aes128_ccm_encrypt              12003.837
+25 TLSv1.2           aes128_ccm_decrypt               5725.843
+26 TLSv1.2           ecdh_p256r1                        41.084
+27 TLSv1.2           ecdsa_sign_p256r1                  57.134
+28 TLSv1.2           ecdsa_verify_p256r1                37.742
+29 TLSv1.2           sha256                          40139.148
+30 TLSv1.2           sha256                          21496.129
+31 TLSv1.2           sha256                           6531.109
+32 TLSv1.2           variation_001                    1305.790
+33 TLSv1.2           sha256                            695.259
+34 TLSv1.2           aes128_ecb_encrypt                542.969
+35 TLSv1.3_Light     sha256                          21579.625
+36 TLSv1.3_Light     sha256                          21607.604
+37 TLSv1.3_Light     sha256                          21564.115
+38 TLSv1.3_Light     sha256_multi                     2654.538
+39 TLSv1.3_Light     chachapoly_encrypt_multi         5066.540
+40 TLSv1.3_Light     chachapoly_decrypt_multi         4135.649
+41 TLSv1.3_Light     ecdsa_sign_ed25519                230.202
+42 TLSv1.3_Light     ecdsa_verify_ed25519               90.477
+43 TLSv1.3_Light     ecdh_x25519                        96.205
+46 Boot_Light        sha256                           1408.385
+51 TLSv1.3_Med_CCM   sha256                          21579.625
+52 TLSv1.3_Med_CCM   sha256                          21607.604
+53 TLSv1.3_Med_CCM   sha256                          21564.115
+54 TLSv1.3_Med_CCM   sha256_multi                     2810.620
+55 TLSv1.3_Med_CCM   aes128_ccm_encrypt_multi         2345.178
+56 TLSv1.3_Med_CCM   aes128_ccm_decrypt_multi         1927.995
+57 TLSv1.3_Med_CCM   ecdsa_sign_p256r1                  57.134
+58 TLSv1.3_Med_CCM   ecdsa_verify_p256r1                37.742
+59 TLSv1.3_Med_CCM   ecdh_p256r1                        41.084
+60 TLSv1.3_Med_CCM   sha256                          14765.231
+61 TLSv1.3_Med_GCM   sha256                          21579.625
+62 TLSv1.3_Med_GCM   sha256                          21607.604
+63 TLSv1.3_Med_GCM   sha256                          21564.115
+64 TLSv1.3_Med_GCM   sha256_multi                     2810.620
+65 TLSv1.3_Med_GCM   aes128_gcm_encrypt_multi         1071.581
+66 TLSv1.3_Med_GCM   aes128_gcm_decrypt_multi          881.398
+67 TLSv1.3_Med_GCM   ecdsa_sign_p256r1                  57.134
+68 TLSv1.3_Med_GCM   ecdsa_verify_p256r1                37.742
+69 TLSv1.3_Med_GCM   ecdh_p256r1                        41.084
+70 TLSv1.3_Med_GCM   sha256                          14765.231
+72 Boot_Med_RSA      sha256                           1408.385
+73 Boot_Med_RSA      rsa_verify_2048                    83.301
+75 Boot_Med_ECC      sha256                           1408.385
+76 Boot_Med_ECC      ecdsa_verify_p256r1                37.742
+77 TLSv1.3_Heavy_CCM sha384                           5871.069
+78 TLSv1.3_Heavy_CCM sha384                           5867.165
+79 TLSv1.3_Heavy_CCM sha384                           5867.165
+80 TLSv1.3_Heavy_CCM sha384_multi                     1187.281
+81 TLSv1.3_Heavy_CCM aes256_ccm_encrypt_multi         1462.972
+82 TLSv1.3_Heavy_CCM aes256_ccm_decrypt_multi         1253.111
+83 TLSv1.3_Heavy_CCM ecdsa_sign_p384r1                   2.406
+84 TLSv1.3_Heavy_CCM ecdsa_verify_p384r1                 1.254
+85 TLSv1.3_Heavy_CCM ecdh_p384r1                         2.484
+86 TLSv1.3_Heavy_CCM sha384                           5866.936
+87 TLSv1.3_Heavy_GCM sha384                           5871.069
+88 TLSv1.3_Heavy_GCM sha384                           5867.165
+89 TLSv1.3_Heavy_GCM sha384                           5867.165
+90 TLSv1.3_Heavy_GCM sha384_multi                     1187.281
+91 TLSv1.3_Heavy_GCM aes256_gcm_encrypt_multi          820.869
+92 TLSv1.3_Heavy_GCM aes256_gcm_decrypt_multi          696.010
+93 TLSv1.3_Heavy_GCM ecdsa_sign_p384r1                   2.406
+94 TLSv1.3_Heavy_GCM ecdsa_verify_p384r1                 1.254
+95 TLSv1.3_Heavy_GCM ecdh_p384r1                         2.484
+96 TLSv1.3_Heavy_GCM sha384                           5866.936
+97 Boot_Heavy_RSA    aes256_ctr_decrypt                879.977
+98 Boot_Heavy_RSA    sha384                            707.580
+99 Boot_Heavy_RSA    rsa_verify_4096                    22.179
+100 Boot_Heavy_ECC    aes256_ctr_decrypt                879.977
+101 Boot_Heavy_ECC    sha384                            707.580
+102 Boot_Heavy_ECC    ecdsa_verify_p384r1                 1.254
+
+Computing suite scores...
+
+Suite                         Score
+----------------- -----------------
+PQC_All                    2042.526
+TLSv1.2                   10418.526
+TLSv1.3_Light               251.907
+Boot_Light                   70.419
+TLSv1.3_Med_CCM             100.576
+TLSv1.3_Med_GCM             100.162
+Boot_Med_RSA                 38.160
+Boot_Med_ECC                 24.572
+TLSv1.3_Heavy_CCM             4.127
+TLSv1.3_Heavy_GCM             4.124
+Boot_Heavy_RSA               10.408
+Boot_Heavy_ECC                1.178
+
+Protocol-weighted PQC score
+Suite                         Score
+----------------- -----------------
+PQC_TLS1.3 (768/65)       40177.367
+  w=0.25 each over kem768 enc/dec and dsa65 sign/verify
+
+Disclaimer: these are not official scores. In order to generate an
+official score, please contact support@eembc.org.

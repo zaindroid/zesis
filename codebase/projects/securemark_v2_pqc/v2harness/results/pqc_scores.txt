@@ -1,0 +1,1388 @@
+      [pqc] crc32=0xab6329b9 self-check=PASS
+         23.575
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0x9c084b80 self-check=PASS
+         19.190
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+         40.901
+21 TLSv1.2           aes128_ecb_encrypt        ---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite             Component                    iterations/s
+-- ----------------- ------------------------- ---------------
+ 1 PQC_All           kem512_kp                       [pqc] crc32=0x62bbeb8f self-check=PASS
+        229.410
+ 2 PQC_All           kem512_enc                      [pqc] crc32=0xbb6188b7 self-check=PASS
+        266.005
+ 3 PQC_All           kem512_dec                      [pqc] crc32=0x9f5f9cec self-check=PASS
+        196.631
+ 4 PQC_All           kem768_kp                       [pqc] crc32=0x90501e72 self-check=PASS
+        142.653
+ 5 PQC_All           kem768_enc                      [pqc] crc32=0x8a48d4a5 self-check=PASS
+        156.912
+ 6 PQC_All           kem768_dec                      [pqc] crc32=0x9bcea716 self-check=PASS
+        121.295
+ 7 PQC_All           kem1024_kp                      [pqc] crc32=0xfcb38031 self-check=PASS
+         90.334
+ 8 PQC_All           kem1024_enc                     [pqc] crc32=0xfdb3b688 self-check=PASS
+         98.606
+ 9 PQC_All           kem1024_dec                     [pqc] crc32=0xc94d4a71 self-check=PASS
+         79.607
+10 PQC_All           dsa44_kp                        [pqc] crc32=0xa3e2b62a self-check=PASS
+         68.956
+11 PQC_All           dsa44_sign                      [pqc] crc32=0xba561067 self-check=PASS
+         34.270
+12 PQC_All           dsa44_ver                       [pqc] crc32=0xba561067 self-check=PASS
+         68.803
+13 PQC_All           dsa65_kp                        [pqc] crc32=0x24eb962b self-check=PASS
+         39.800
+14 PQC_All           dsa65_sign                      [pqc] crc32=0x1ee8f069 self-check=PASS
+         19.102
+15 PQC_All           dsa65_ver                       [pqc] crc32=0x1ee8f069 self-check=PASS
+         40.692
+16 PQC_All           dsa87_kp                        [pqc] crc32=0x58bf68d4 self-check=PASS
+         23.125
+17 PQC_All           dsa87_sign                      [pqc] crc32=0xab6329b9 self-check=PASS
+         10.825
+18 PQC_All           dsa87_ver                       [pqc] crc32=0xab6329b9 self-check=PASS
+         23.575
+19 PQC_All           hashdsa65_sign                  [pqc] crc32=0x9c084b80 self-check=PASS
+         19.190
+20 PQC_All           hashdsa65_ver                   [pqc] crc32=0x9c084b80 self-check=PASS
+         40.901
+21 TLSv1.2           aes128_ecb_encrypt               7245.326
+22 TLSv1.2           aes128_ecb_encrypt               4763.114
+23 TLSv1.2           aes128_ecb_encrypt               3385.393
+24 TLSv1.2           aes128_ccm_encrypt              12003.837
+25 TLSv1.2           aes128_ccm_decrypt               5725.843
+26 TLSv1.2           ecdh_p256r1                        41.084
+27 TLSv1.2           ecdsa_sign_p256r1                  57.134
+28 TLSv1.2           ecdsa_verify_p256r1                37.742
+29 TLSv1.2           sha256                          40139.148
+30 TLSv1.2           sha256                          21496.129
+31 TLSv1.2           sha256                           6531.109
+32 TLSv1.2           variation_001                    1305.790
+33 TLSv1.2           sha256                            695.259
+34 TLSv1.2           aes128_ecb_encrypt                542.969
+35 TLSv1.3_Light     sha256                          21579.625
+36 TLSv1.3_Light     sha256                          21607.604
+37 TLSv1.3_Light     sha256                          21564.115
+38 TLSv1.3_Light     sha256_multi                     2654.538
+39 TLSv1.3_Light     chachapoly_encrypt_multi         5066.540
+40 TLSv1.3_Light     chachapoly_decrypt_multi         4135.649
+41 TLSv1.3_Light     ecdsa_sign_ed25519                230.202
+42 TLSv1.3_Light     ecdsa_verify_ed25519               90.477
+43 TLSv1.3_Light     ecdh_x25519                        96.205
+46 Boot_Light        sha256                           1408.385
+51 TLSv1.3_Med_CCM   sha256                          21579.625
+52 TLSv1.3_Med_CCM   sha256                          21607.604
+53 TLSv1.3_Med_CCM   sha256                          21564.115
+54 TLSv1.3_Med_CCM   sha256_multi                     2810.620
+55 TLSv1.3_Med_CCM   aes128_ccm_encrypt_multi         2345.178
+56 TLSv1.3_Med_CCM   aes128_ccm_decrypt_multi         1927.995
+57 TLSv1.3_Med_CCM   ecdsa_sign_p256r1                  57.134
+58 TLSv1.3_Med_CCM   ecdsa_verify_p256r1                37.742
+59 TLSv1.3_Med_CCM   ecdh_p256r1                        41.084
+60 TLSv1.3_Med_CCM   sha256                          14765.231
+61 TLSv1.3_Med_GCM   sha256                          21579.625
+62 TLSv1.3_Med_GCM   sha256                          21607.604
+63 TLSv1.3_Med_GCM   sha256                          21564.115
+64 TLSv1.3_Med_GCM   sha256_multi                     2810.620
+65 TLSv1.3_Med_GCM   aes128_gcm_encrypt_multi         1071.581
+66 TLSv1.3_Med_GCM   aes128_gcm_decrypt_multi          881.398
+67 TLSv1.3_Med_GCM   ecdsa_sign_p256r1                  57.134
+68 TLSv1.3_Med_GCM   ecdsa_verify_p256r1                37.742
+69 TLSv1.3_Med_GCM   ecdh_p256r1                        41.084
+70 TLSv1.3_Med_GCM   sha256                          14765.231
+72 Boot_Med_RSA      sha256                           1408.385
+73 Boot_Med_RSA      rsa_verify_2048                    83.301
+75 Boot_Med_ECC      sha256                           1408.385
+76 Boot_Med_ECC      ecdsa_verify_p256r1                37.742
+77 TLSv1.3_Heavy_CCM sha384                           5871.069
+78 TLSv1.3_Heavy_CCM sha384                           5867.165
+79 TLSv1.3_Heavy_CCM sha384                           5867.165
+80 TLSv1.3_Heavy_CCM sha384_multi                     1187.281
+81 TLSv1.3_Heavy_CCM aes256_ccm_encrypt_multi         1462.972
+82 TLSv1.3_Heavy_CCM aes256_ccm_decrypt_multi         1253.111
+83 TLSv1.3_Heavy_CCM ecdsa_sign_p384r1                   2.406
+84 TLSv1.3_Heavy_CCM ecdsa_verify_p384r1                 1.254
+85 TLSv1.3_Heavy_CCM ecdh_p384r1                         2.484
+86 TLSv1.3_Heavy_CCM sha384                           5866.936
+87 TLSv1.3_Heavy_GCM sha384                           5871.069
+88 TLSv1.3_Heavy_GCM sha384                           5867.165
+89 TLSv1.3_Heavy_GCM sha384                           5867.165
+90 TLSv1.3_Heavy_GCM sha384_multi                     1187.281
+91 TLSv1.3_Heavy_GCM aes256_gcm_encrypt_multi          820.869
+92 TLSv1.3_Heavy_GCM aes256_gcm_decrypt_multi          696.010
+93 TLSv1.3_Heavy_GCM ecdsa_sign_p384r1                   2.406
+94 TLSv1.3_Heavy_GCM ecdsa_verify_p384r1                 1.254
+95 TLSv1.3_Heavy_GCM ecdh_p384r1                         2.484
+96 TLSv1.3_Heavy_GCM sha384                           5866.936
+97 Boot_Heavy_RSA    aes256_ctr_decrypt                879.977
+98 Boot_Heavy_RSA    sha384                            707.580
+99 Boot_Heavy_RSA    rsa_verify_4096                    22.179
+100 Boot_Heavy_ECC    aes256_ctr_decrypt                879.977
+101 Boot_Heavy_ECC    sha384                            707.580
+102 Boot_Heavy_ECC    ecdsa_verify_p384r1                 1.254
+
+Computing suite scores...
+
+Suite                         Score
+----------------- -----------------
+PQC_All                    2068.402
+TLSv1.2                   10418.526
+TLSv1.3_Light               251.907
+Boot_Light                   70.419
+TLSv1.3_Med_CCM             100.576
+TLSv1.3_Med_GCM             100.162
+Boot_Med_RSA                 38.160
+Boot_Med_ECC                 24.572
+TLSv1.3_Heavy_CCM             4.127
+TLSv1.3_Heavy_GCM             4.124
+Boot_Heavy_RSA               10.408
+Boot_Heavy_ECC                1.178
+
+Protocol-weighted PQC score
+Suite                         Score
+----------------- -----------------
+PQC_TLS1.3 (768/65)       43696.105
+  w=0.25 each over kem768 enc/dec and dsa65 sign/verify
+
+Disclaimer: these are not official scores. In order to generate an
+official score, please contact support@eembc.org.
+---------------------------------------------------
+The SecureMark(R) Benchmark, Copyright (C) EEMBC(R)
+---------------------------------------------------
+Scratch buffer is 5120 bytes
+Number of subtests: 102
+
+Collecting component data...
+
+ # Suite          dwt_sanity,10030
+alg,ML-KEM-1024
+stack_region_bytes,32768
+op,cycles,stack_hwm_bytes
+keypair,2076670,15448
+encaps,2295845,19096
+decaps,2605015,20648
+keypair,2075389,15448
+encaps,2295887,19096
+decaps,2604872,20648
+keypair,2075364,15448
+encaps,2295862,19096
+decaps,2604847,20648
+keypair,2075085,15448
+encaps,2295583,19096
+decaps,2604568,20648
+keypair,2075592,15448
+encaps,2296090,19096
+decaps,2605075,20648
+keypair,2075403,15448
+encaps,2295901,19096
+decaps,2604886,20648
+keypair,2093554,15448
+encaps,2314052,19096
+decaps,2623037,20648
+keypair,2076331,15448
+encaps,2296829,19096
+decaps,2605814,20648
+keypair,2075285,15448
+encaps,2295783,19096
+decaps,2604768,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075418,15448
+encaps,2295916,19096
+decaps,2604901,20648
+keypair,2075219,15448
+encaps,2295717,19096
+decaps,2604702,20648
+keypair,2074951,15448
+encaps,2295449,19096
+decaps,2604434,20648
+keypair,2075686,15448
+encaps,2296184,19096
+decaps,2605169,20648
+keypair,2075079,15448
+encaps,2295577,19096
+decaps,2604562,20648
+keypair,2094434,15448
+encaps,2314932,19096
+decaps,2623917,20648
+keypair,2074678,15448
+encaps,2295176,19096
+decaps,2604161,20648
+keypair,2075479,15448
+encaps,2295977,19096
+decaps,2604962,20648
+keypair,2075218,15448
+encaps,2295716,19096
+decaps,2604701,20648
+keypair,2095006,15448
+encaps,2315504,19096
+decaps,2624489,20648
+keypair,2076092,15448
+encaps,2296590,19096
+decaps,2605575,20648
+keypair,2075493,15448
+encaps,2295991,19096
+decaps,2604976,20648
+keypair,2094391,15448
+encaps,2314889,19096
+decaps,2623874,20648
+keypair,2075657,15448
+encaps,2296155,19096
+decaps,2605140,20648
+keypair,2075812,15448
+encaps,2296310,19096
+decaps,2605295,20648
+keypair,2075525,15448
+encaps,2296023,19096
+decaps,2605008,20648
+keypair,2075336,15448
+encaps,2295834,19096
+decaps,2604819,20648
+keypair,2075816,15448
+encaps,2296314,19096
+decaps,2605299,20648
+keypair,2074937,15448
+encaps,2295435,19096
+decaps,2604420,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2094934,15448
+encaps,2315432,19096
+decaps,2624417,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075435,15448
+encaps,2295933,19096
+decaps,2604918,20648
+keypair,2076187,15448
+encaps,2296685,19096
+decaps,2605670,20648
+keypair,2075145,15448
+encaps,2295643,19096
+decaps,2604628,20648
+keypair,2075576,15448
+encaps,2296074,19096
+decaps,2605059,20648
+keypair,2075283,15448
+encaps,2295781,19096
+decaps,2604766,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075827,15448
+encaps,2296325,19096
+decaps,2605310,20648
+keypair,2094629,15448
+encaps,2315127,19096
+decaps,2624112,20648
+keypair,2095056,15448
+encaps,2315554,19096
+decaps,2624539,20648
+keypair,2094842,15448
+encaps,2315340,19096
+decaps,2624325,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075928,15448
+encaps,2296426,19096
+decaps,2605411,20648
+keypair,2075382,15448
+encaps,2295880,19096
+decaps,2604865,20648
+keypair,2074848,15448
+encaps,2295346,19096
+decaps,2604331,20648
+keypair,2076029,15448
+encaps,2296527,19096
+decaps,2605512,20648
+keypair,2094371,15448
+encaps,2314869,19096
+decaps,2623854,20648
+keypair,2075507,15448
+encaps,2296005,19096
+decaps,2604990,20648
+keypair,2075647,15448
+encaps,2296145,19096
+decaps,2605130,20648
+keypair,2075160,15448
+encaps,2295658,19096
+decaps,2604643,20648
+keypair,2094507,15448
+encaps,2315005,19096
+decaps,2623990,20648
+keypair,2075287,15448
+encaps,2295785,19096
+decaps,2604770,20648
+keypair,2075432,15448
+encaps,2295930,19096
+decaps,2604915,20648
+keypair,2075299,15448
+encaps,2295797,19096
+decaps,2604782,20648
+keypair,2075467,15448
+encaps,2295965,19096
+decaps,2604950,20648
+keypair,2075658,15448
+encaps,2296156,19096
+decaps,2605141,20648
+keypair,2074798,15448
+encaps,2295296,19096
+decaps,2604281,20648
+keypair,2075216,15448
+encaps,2295714,19096
+decaps,2604699,20648
+keypair,2095156,15448
+encaps,2315654,19096
+decaps,2624639,20648
+keypair,2075747,15448
+encaps,2296245,19096
+decaps,2605230,20648
+keypair,2075735,15448
+encaps,2296233,19096
+decaps,2605218,20648
+keypair,2075777,15448
+encaps,2296275,19096
+decaps,2605260,20648
+keypair,2094563,15448
+encaps,2315061,19096
+decaps,2624046,20648
+keypair,2074639,15448
+encaps,2295137,19096
+decaps,2604122,20648
+keypair,2075687,15448
+encaps,2296185,19096
+decaps,2605170,20648
+keypair,2075540,15448
+encaps,2296038,19096
+decaps,2605023,20648
+keypair,2075117,15448
+encaps,2295615,19096
+decaps,2604600,20648
+keypair,2075433,15448
+encaps,2295931,19096
+decaps,2604916,20648
+keypair,2075277,15448
+encaps,2295775,19096
+decaps,2604760,20648
+keypair,2075217,15448
+encaps,2295715,19096
+decaps,2604700,20648
+keypair,2075347,15448
+encaps,2295845,19096
+decaps,2604830,20648
+keypair,2075545,15448
+encaps,2296043,19096
+decaps,2605028,20648
+keypair,2075114,15448
+encaps,2295612,19096
+decaps,2604597,20648
+keypair,2075882,15448
+encaps,2296380,19096
+decaps,2605365,20648
+keypair,2075399,15448
+encaps,2295897,19096
+decaps,2604882,20648
+keypair,2075273,15448
+encaps,2295771,19096
+decaps,2604756,20648
+keypair,2075182,15448
+encaps,2295680,19096
+decaps,2604665,20648
+keypair,2075019,15448
+encaps,2295517,19096
+decaps,2604502,20648
+keypair,2075837,15448
+encaps,2296335,19096
+decaps,2605320,20648
+keypair,2075883,15448
+encaps,2296381,19096
+decaps,2605366,20648
+keypair,2075378,15448
+encaps,2295876,19096
+decaps,2604861,20648
+keypair,2075357,15448
+encaps,2295855,19096
+decaps,2604840,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2093815,15448
+encaps,2314313,19096
+decaps,2623298,20648
+keypair,2075440,15448
+encaps,2295938,19096
+decaps,2604923,20648
+keypair,2095455,15448
+encaps,2315953,19096
+decaps,2624938,20648
+keypair,2075761,15448
+encaps,2296259,19096
+decaps,2605244,20648
+keypair,2075230,15448
+encaps,2295728,19096
+decaps,2604713,20648
+keypair,2094152,15448
+encaps,2314650,19096
+decaps,2623635,20648
+keypair,2075302,15448
+encaps,2295800,19096
+decaps,2604785,20648
+keypair,2076032,15448
+encaps,2296530,19096
+decaps,2605515,20648
+keypair,2074820,15448
+encaps,2295318,19096
+decaps,2604303,20648
+keypair,2075294,15448
+encaps,2295792,19096
+decaps,2604777,20648
+keypair,2075633,15448
+encaps,2296131,19096
+decaps,2605116,20648
+keypair,2075442,15448
+encaps,2295940,19096
+decaps,2604925,20648
+keypair,2075622,15448
+encaps,2296120,19096
+decaps,2605105,20648
+keypair,2075436,15448
+encaps,2295934,19096
+decaps,2604919,20648
+keypair,2075478,15448
+encaps,2295976,19096
+decaps,2604961,20648
+kem_match,1
+done
+dwt_sanity,10030
+alg,ML-KEM-1024
+stack_region_bytes,32768
+op,cycles,stack_hwm_bytes
+keypair,2076670,15448
+encaps,2295845,19096
+decaps,2605015,20648
+keypair,2075389,15448
+encaps,2295887,19096
+decaps,2604872,20648
+keypair,2075364,15448
+encaps,2295862,19096
+decaps,2604847,20648
+keypair,2075085,15448
+encaps,2295583,19096
+decaps,2604568,20648
+keypair,2075592,15448
+encaps,2296090,19096
+decaps,2605075,20648
+keypair,2075403,15448
+encaps,2295901,19096
+decaps,2604886,20648
+keypair,2093554,15448
+encaps,2314052,19096
+decaps,2623037,20648
+keypair,2076331,15448
+encaps,2296829,19096
+decaps,2605814,20648
+keypair,2075285,15448
+encaps,2295783,19096
+decaps,2604768,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075418,15448
+encaps,2295916,19096
+decaps,2604901,20648
+keypair,2075219,15448
+encaps,2295717,19096
+decaps,2604702,20648
+keypair,2074951,15448
+encaps,2295449,19096
+decaps,2604434,20648
+keypair,2075686,15448
+encaps,2296184,19096
+decaps,2605169,20648
+keypair,2075079,15448
+encaps,2295577,19096
+decaps,2604562,20648
+keypair,2094434,15448
+encaps,2314932,19096
+decaps,2623917,20648
+keypair,2074678,15448
+encaps,2295176,19096
+decaps,2604161,20648
+keypair,2075479,15448
+encaps,2295977,19096
+decaps,2604962,20648
+keypair,2075218,15448
+encaps,2295716,19096
+decaps,2604701,20648
+keypair,2095006,15448
+encaps,2315504,19096
+decaps,2624489,20648
+keypair,2076092,15448
+encaps,2296590,19096
+decaps,2605575,20648
+keypair,2075493,15448
+encaps,2295991,19096
+decaps,2604976,20648
+keypair,2094391,15448
+encaps,2314889,19096
+decaps,2623874,20648
+keypair,2075657,15448
+encaps,2296155,19096
+decaps,2605140,20648
+keypair,2075812,15448
+encaps,2296310,19096
+decaps,2605295,20648
+keypair,2075525,15448
+encaps,2296023,19096
+decaps,2605008,20648
+keypair,2075336,15448
+encaps,2295834,19096
+decaps,2604819,20648
+keypair,2075816,15448
+encaps,2296314,19096
+decaps,2605299,20648
+keypair,2074937,15448
+encaps,2295435,19096
+decaps,2604420,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2094934,15448
+encaps,2315432,19096
+decaps,2624417,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075435,15448
+encaps,2295933,19096
+decaps,2604918,20648
+keypair,2076187,15448
+encaps,2296685,19096
+decaps,2605670,20648
+keypair,2075145,15448
+encaps,2295643,19096
+decaps,2604628,20648
+keypair,2075576,15448
+encaps,2296074,19096
+decaps,2605059,20648
+keypair,2075283,15448
+encaps,2295781,19096
+decaps,2604766,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075827,15448
+encaps,2296325,19096
+decaps,2605310,20648
+keypair,2094629,15448
+encaps,2315127,19096
+decaps,2624112,20648
+keypair,2095056,15448
+encaps,2315554,19096
+decaps,2624539,20648
+keypair,2094842,15448
+encaps,2315340,19096
+decaps,2624325,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075928,15448
+encaps,2296426,19096
+decaps,2605411,20648
+keypair,2075382,15448
+encaps,2295880,19096
+decaps,2604865,20648
+keypair,2074848,15448
+encaps,2295346,19096
+decaps,2604331,20648
+keypair,2076029,15448
+encaps,2296527,19096
+decaps,2605512,20648
+keypair,2094371,15448
+encaps,2314869,19096
+decaps,2623854,20648
+keypair,2075507,15448
+encaps,2296005,19096
+decaps,2604990,20648
+keypair,2075647,15448
+encaps,2296145,19096
+decaps,2605130,20648
+keypair,2075160,15448
+encaps,2295658,19096
+decaps,2604643,20648
+keypair,2094507,15448
+encaps,2315005,19096
+decaps,2623990,20648
+keypair,2075287,15448
+encaps,2295785,19096
+decaps,2604770,20648
+keypair,2075432,15448
+encaps,2295930,19096
+decaps,2604915,20648
+keypair,2075299,15448
+encaps,2295797,19096
+decaps,2604782,20648
+keypair,2075467,15448
+encaps,2295965,19096
+decaps,2604950,20648
+keypair,2075658,15448
+encaps,2296156,19096
+decaps,2605141,20648
+keypair,2074798,15448
+encaps,2295296,19096
+decaps,2604281,20648
+keypair,2075216,15448
+encaps,2295714,19096
+decaps,2604699,20648
+keypair,2095156,15448
+encaps,2315654,19096
+decaps,2624639,20648
+keypair,2075747,15448
+encaps,2296245,19096
+decaps,2605230,20648
+keypair,2075735,15448
+encaps,2296233,19096
+decaps,2605218,20648
+keypair,2075777,15448
+encaps,2296275,19096
+decaps,2605260,20648
+keypair,2094563,15448
+encaps,2315061,19096
+decaps,2624046,20648
+keypair,2074639,15448
+encaps,2295137,19096
+decaps,2604122,20648
+keypair,2075687,15448
+encaps,2296185,19096
+decaps,2605170,20648
+keypair,2075540,15448
+encaps,2296038,19096
+decaps,2605023,20648
+keypair,2075117,15448
+encaps,2295615,19096
+decaps,2604600,20648
+keypair,2075433,15448
+encaps,2295931,19096
+decaps,2604916,20648
+keypair,2075277,15448
+encaps,2295775,19096
+decaps,2604760,20648
+keypair,2075217,15448
+encaps,2295715,19096
+decaps,2604700,20648
+keypair,2075347,15448
+encaps,2295845,19096
+decaps,2604830,20648
+keypair,2075545,15448
+encaps,2296043,19096
+decaps,2605028,20648
+keypair,2075114,15448
+encaps,2295612,19096
+decaps,2604597,20648
+keypair,2075882,15448
+encaps,2296380,19096
+decaps,2605365,20648
+keypair,2075399,15448
+encaps,2295897,19096
+decaps,2604882,20648
+keypair,2075273,15448
+encaps,2295771,19096
+decaps,2604756,20648
+keypair,2075182,15448
+encaps,2295680,19096
+decaps,2604665,20648
+keypair,2075019,15448
+encaps,2295517,19096
+decaps,2604502,20648
+keypair,2075837,15448
+encaps,2296335,19096
+decaps,2605320,20648
+keypair,2075883,15448
+encaps,2296381,19096
+decaps,2605366,20648
+keypair,2075378,15448
+encaps,2295876,19096
+decaps,2604861,20648
+keypair,2075357,15448
+encaps,2295855,19096
+decaps,2604840,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2093815,15448
+encaps,2314313,19096
+decaps,2623298,20648
+keypair,2075440,15448
+encaps,2295938,19096
+decaps,2604923,20648
+keypair,2095455,15448
+encaps,2315953,19096
+decaps,2624938,20648
+keypair,2075761,15448
+encaps,2296259,19096
+decaps,2605244,20648
+keypair,2075230,15448
+encaps,2295728,19096
+decaps,2604713,20648
+keypair,2094152,15448
+encaps,2314650,19096
+decaps,2623635,20648
+keypair,2075302,15448
+encaps,2295800,19096
+decaps,2604785,20648
+keypair,2076032,15448
+encaps,2296530,19096
+decaps,2605515,20648
+keypair,2074820,15448
+encaps,2295318,19096
+decaps,2604303,20648
+keypair,2075294,15448
+encaps,2295792,19096
+decaps,2604777,20648
+keypair,2075633,15448
+encaps,2296131,19096
+decaps,2605116,20648
+keypair,2075442,15448
+encaps,2295940,19096
+decaps,2604925,20648
+keypair,2075622,15448
+encaps,2296120,19096
+decaps,2605105,20648
+keypair,2075436,15448
+encaps,2295934,19096
+decaps,2604919,20648
+keypair,2075478,15448
+encaps,2295976,19096
+decaps,2604961,20648
+kem_match,1
+done
+dwt_sanity,10030
+alg,ML-KEM-1024
+stack_region_bytes,32768
+op,cycles,stack_hwm_bytes
+keypair,2076670,15448
+encaps,2295845,19096
+decaps,2605015,20648
+keypair,2075389,15448
+encaps,2295887,19096
+decaps,2604872,20648
+keypair,2075364,15448
+encaps,2295862,19096
+decaps,2604847,20648
+keypair,2075085,15448
+encaps,2295583,19096
+decaps,2604568,20648
+keypair,2075592,15448
+encaps,2296090,19096
+decaps,2605075,20648
+keypair,2075403,15448
+encaps,2295901,19096
+decaps,2604886,20648
+keypair,2093554,15448
+encaps,2314052,19096
+decaps,2623037,20648
+keypair,2076331,15448
+encaps,2296829,19096
+decaps,2605814,20648
+keypair,2075285,15448
+encaps,2295783,19096
+decaps,2604768,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075418,15448
+encaps,2295916,19096
+decaps,2604901,20648
+keypair,2075219,15448
+encaps,2295717,19096
+decaps,2604702,20648
+keypair,2074951,15448
+encaps,2295449,19096
+decaps,2604434,20648
+keypair,2075686,15448
+encaps,2296184,19096
+decaps,2605169,20648
+keypair,2075079,15448
+encaps,2295577,19096
+decaps,2604562,20648
+keypair,2094434,15448
+encaps,2314932,19096
+decaps,2623917,20648
+keypair,2074678,15448
+encaps,2295176,19096
+decaps,2604161,20648
+keypair,2075479,15448
+encaps,2295977,19096
+decaps,2604962,20648
+keypair,2075218,15448
+encaps,2295716,19096
+decaps,2604701,20648
+keypair,2095006,15448
+encaps,2315504,19096
+decaps,2624489,20648
+keypair,2076092,15448
+encaps,2296590,19096
+decaps,2605575,20648
+keypair,2075493,15448
+encaps,2295991,19096
+decaps,2604976,20648
+keypair,2094391,15448
+encaps,2314889,19096
+decaps,2623874,20648
+keypair,2075657,15448
+encaps,2296155,19096
+decaps,2605140,20648
+keypair,2075812,15448
+encaps,2296310,19096
+decaps,2605295,20648
+keypair,2075525,15448
+encaps,2296023,19096
+decaps,2605008,20648
+keypair,2075336,15448
+encaps,2295834,19096
+decaps,2604819,20648
+keypair,2075816,15448
+encaps,2296314,19096
+decaps,2605299,20648
+keypair,2074937,15448
+encaps,2295435,19096
+decaps,2604420,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2094934,15448
+encaps,2315432,19096
+decaps,2624417,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075435,15448
+encaps,2295933,19096
+decaps,2604918,20648
+keypair,2076187,15448
+encaps,2296685,19096
+decaps,2605670,20648
+keypair,2075145,15448
+encaps,2295643,19096
+decaps,2604628,20648
+keypair,2075576,15448
+encaps,2296074,19096
+decaps,2605059,20648
+keypair,2075283,15448
+encaps,2295781,19096
+decaps,2604766,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075827,15448
+encaps,2296325,19096
+decaps,2605310,20648
+keypair,2094629,15448
+encaps,2315127,19096
+decaps,2624112,20648
+keypair,2095056,15448
+encaps,2315554,19096
+decaps,2624539,20648
+keypair,2094842,15448
+encaps,2315340,19096
+decaps,2624325,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075928,15448
+encaps,2296426,19096
+decaps,2605411,20648
+keypair,2075382,15448
+encaps,2295880,19096
+decaps,2604865,20648
+keypair,2074848,15448
+encaps,2295346,19096
+decaps,2604331,20648
+keypair,2076029,15448
+encaps,2296527,19096
+decaps,2605512,20648
+keypair,2094371,15448
+encaps,2314869,19096
+decaps,2623854,20648
+keypair,2075507,15448
+encaps,2296005,19096
+decaps,2604990,20648
+keypair,2075647,15448
+encaps,2296145,19096
+decaps,2605130,20648
+keypair,2075160,15448
+encaps,2295658,19096
+decaps,2604643,20648
+keypair,2094507,15448
+encaps,2315005,19096
+decaps,2623990,20648
+keypair,2075287,15448
+encaps,2295785,19096
+decaps,2604770,20648
+keypair,2075432,15448
+encaps,2295930,19096
+decaps,2604915,20648
+keypair,2075299,15448
+encaps,2295797,19096
+decaps,2604782,20648
+keypair,2075467,15448
+encaps,2295965,19096
+decaps,2604950,20648
+keypair,2075658,15448
+encaps,2296156,19096
+decaps,2605141,20648
+keypair,2074798,15448
+encaps,2295296,19096
+decaps,2604281,20648
+keypair,2075216,15448
+encaps,2295714,19096
+decaps,2604699,20648
+keypair,2095156,15448
+encaps,2315654,19096
+decaps,2624639,20648
+keypair,2075747,15448
+encaps,2296245,19096
+decaps,2605230,20648
+keypair,2075735,15448
+encaps,2296233,19096
+decaps,2605218,20648
+keypair,2075777,15448
+encaps,2296275,19096
+decaps,2605260,20648
+keypair,2094563,15448
+encaps,2315061,19096
+decaps,2624046,20648
+keypair,2074639,15448
+encaps,2295137,19096
+decaps,2604122,20648
+keypair,2075687,15448
+encaps,2296185,19096
+decaps,2605170,20648
+keypair,2075540,15448
+encaps,2296038,19096
+decaps,2605023,20648
+keypair,2075117,15448
+encaps,2295615,19096
+decaps,2604600,20648
+keypair,2075433,15448
+encaps,2295931,19096
+decaps,2604916,20648
+keypair,2075277,15448
+encaps,2295775,19096
+decaps,2604760,20648
+keypair,2075217,15448
+encaps,2295715,19096
+decaps,2604700,20648
+keypair,2075347,15448
+encaps,2295845,19096
+decaps,2604830,20648
+keypair,2075545,15448
+encaps,2296043,19096
+decaps,2605028,20648
+keypair,2075114,15448
+encaps,2295612,19096
+decaps,2604597,20648
+keypair,2075882,15448
+encaps,2296380,19096
+decaps,2605365,20648
+keypair,2075399,15448
+encaps,2295897,19096
+decaps,2604882,20648
+keypair,2075273,15448
+encaps,2295771,19096
+decaps,2604756,20648
+keypair,2075182,15448
+encaps,2295680,19096
+decaps,2604665,20648
+keypair,2075019,15448
+encaps,2295517,19096
+decaps,2604502,20648
+keypair,2075837,15448
+encaps,2296335,19096
+decaps,2605320,20648
+keypair,2075883,15448
+encaps,2296381,19096
+decaps,2605366,20648
+keypair,2075378,15448
+encaps,2295876,19096
+decaps,2604861,20648
+keypair,2075357,15448
+encaps,2295855,19096
+decaps,2604840,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2093815,15448
+encaps,2314313,19096
+decaps,2623298,20648
+keypair,2075440,15448
+encaps,2295938,19096
+decaps,2604923,20648
+keypair,2095455,15448
+encaps,2315953,19096
+decaps,2624938,20648
+keypair,2075761,15448
+encaps,2296259,19096
+decaps,2605244,20648
+keypair,2075230,15448
+encaps,2295728,19096
+decaps,2604713,20648
+keypair,2094152,15448
+encaps,2314650,19096
+decaps,2623635,20648
+keypair,2075302,15448
+encaps,2295800,19096
+decaps,2604785,20648
+keypair,2076032,15448
+encaps,2296530,19096
+decaps,2605515,20648
+keypair,2074820,15448
+encaps,2295318,19096
+decaps,2604303,20648
+keypair,2075294,15448
+encaps,2295792,19096
+decaps,2604777,20648
+keypair,2075633,15448
+encaps,2296131,19096
+decaps,2605116,20648
+keypair,2075442,15448
+encaps,2295940,19096
+decaps,2604925,20648
+keypair,2075622,15448
+encaps,2296120,19096
+decaps,2605105,20648
+keypair,2075436,15448
+encaps,2295934,19096
+decaps,2604919,20648
+keypair,2075478,15448
+encaps,2295976,19096
+decaps,2604961,20648
+kem_match,1
+done
+dwt_sanity,10030
+alg,ML-KEM-1024
+stack_region_bytes,32768
+op,cycles,stack_hwm_bytes
+keypair,2076670,15448
+encaps,2295845,19096
+decaps,2605015,20648
+keypair,2075389,15448
+encaps,2295887,19096
+decaps,2604872,20648
+keypair,2075364,15448
+encaps,2295862,19096
+decaps,2604847,20648
+keypair,2075085,15448
+encaps,2295583,19096
+decaps,2604568,20648
+keypair,2075592,15448
+encaps,2296090,19096
+decaps,2605075,20648
+keypair,2075403,15448
+encaps,2295901,19096
+decaps,2604886,20648
+keypair,2093554,15448
+encaps,2314052,19096
+decaps,2623037,20648
+keypair,2076331,15448
+encaps,2296829,19096
+decaps,2605814,20648
+keypair,2075285,15448
+encaps,2295783,19096
+decaps,2604768,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075418,15448
+encaps,2295916,19096
+decaps,2604901,20648
+keypair,2075219,15448
+encaps,2295717,19096
+decaps,2604702,20648
+keypair,2074951,15448
+encaps,2295449,19096
+decaps,2604434,20648
+keypair,2075686,15448
+encaps,2296184,19096
+decaps,2605169,20648
+keypair,2075079,15448
+encaps,2295577,19096
+decaps,2604562,20648
+keypair,2094434,15448
+encaps,2314932,19096
+decaps,2623917,20648
+keypair,2074678,15448
+encaps,2295176,19096
+decaps,2604161,20648
+keypair,2075479,15448
+encaps,2295977,19096
+decaps,2604962,20648
+keypair,2075218,15448
+encaps,2295716,19096
+decaps,2604701,20648
+keypair,2095006,15448
+encaps,2315504,19096
+decaps,2624489,20648
+keypair,2076092,15448
+encaps,2296590,19096
+decaps,2605575,20648
+keypair,2075493,15448
+encaps,2295991,19096
+decaps,2604976,20648
+keypair,2094391,15448
+encaps,2314889,19096
+decaps,2623874,20648
+keypair,2075657,15448
+encaps,2296155,19096
+decaps,2605140,20648
+keypair,2075812,15448
+encaps,2296310,19096
+decaps,2605295,20648
+keypair,2075525,15448
+encaps,2296023,19096
+decaps,2605008,20648
+keypair,2075336,15448
+encaps,2295834,19096
+decaps,2604819,20648
+keypair,2075816,15448
+encaps,2296314,19096
+decaps,2605299,20648
+keypair,2074937,15448
+encaps,2295435,19096
+decaps,2604420,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2075868,15448
+encaps,2296366,19096
+decaps,2605351,20648
+keypair,2094934,15448
+encaps,2315432,19096
+decaps,2624417,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075435,15448
+encaps,2295933,19096
+decaps,2604918,20648
+keypair,2076187,15448
+encaps,2296685,19096
+decaps,2605670,20648
+keypair,2075145,15448
+encaps,2295643,19096
+decaps,2604628,20648
+keypair,2075576,15448
+encaps,2296074,19096
+decaps,2605059,20648
+keypair,2075283,15448
+encaps,2295781,19096
+decaps,2604766,20648
+keypair,2075238,15448
+encaps,2295736,19096
+decaps,2604721,20648
+keypair,2075827,15448
+encaps,2296325,19096
+decaps,2605310,20648
+keypair,2094629,15448
+encaps,2315127,19096
+decaps,2624112,20648
+keypair,2095056,15448
+encaps,2315554,19096
+decaps,2624539,20648
+keypair,2094842,15448
+encaps,2315340,19096
+decaps,2624325,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2075928,15448
+encaps,2296426,19096
+decaps,2605411,20648
+keypair,2075382,15448
+encaps,2295880,19096
+decaps,2604865,20648
+keypair,2074848,15448
+encaps,2295346,19096
+decaps,2604331,20648
+keypair,2076029,15448
+encaps,2296527,19096
+decaps,2605512,20648
+keypair,2094371,15448
+encaps,2314869,19096
+decaps,2623854,20648
+keypair,2075507,15448
+encaps,2296005,19096
+decaps,2604990,20648
+keypair,2075647,15448
+encaps,2296145,19096
+decaps,2605130,20648
+keypair,2075160,15448
+encaps,2295658,19096
+decaps,2604643,20648
+keypair,2094507,15448
+encaps,2315005,19096
+decaps,2623990,20648
+keypair,2075287,15448
+encaps,2295785,19096
+decaps,2604770,20648
+keypair,2075432,15448
+encaps,2295930,19096
+decaps,2604915,20648
+keypair,2075299,15448
+encaps,2295797,19096
+decaps,2604782,20648
+keypair,2075467,15448
+encaps,2295965,19096
+decaps,2604950,20648
+keypair,2075658,15448
+encaps,2296156,19096
+decaps,2605141,20648
+keypair,2074798,15448
+encaps,2295296,19096
+decaps,2604281,20648
+keypair,2075216,15448
+encaps,2295714,19096
+decaps,2604699,20648
+keypair,2095156,15448
+encaps,2315654,19096
+decaps,2624639,20648
+keypair,2075747,15448
+encaps,2296245,19096
+decaps,2605230,20648
+keypair,2075735,15448
+encaps,2296233,19096
+decaps,2605218,20648
+keypair,2075777,15448
+encaps,2296275,19096
+decaps,2605260,20648
+keypair,2094563,15448
+encaps,2315061,19096
+decaps,2624046,20648
+keypair,2074639,15448
+encaps,2295137,19096
+decaps,2604122,20648
+keypair,2075687,15448
+encaps,2296185,19096
+decaps,2605170,20648
+keypair,2075540,15448
+encaps,2296038,19096
+decaps,2605023,20648
+keypair,2075117,15448
+encaps,2295615,19096
+decaps,2604600,20648
+keypair,2075433,15448
+encaps,2295931,19096
+decaps,2604916,20648
+keypair,2075277,15448
+encaps,2295775,19096
+decaps,2604760,20648
+keypair,2075217,15448
+encaps,2295715,19096
+decaps,2604700,20648
+keypair,2075347,15448
+encaps,2295845,19096
+decaps,2604830,20648
+keypair,2075545,15448
+encaps,2296043,19096
+decaps,2605028,20648
+keypair,2075114,15448
+encaps,2295612,19096
+decaps,2604597,20648
+keypair,2075882,15448
+encaps,2296380,19096
+decaps,2605365,20648
+keypair,2075399,15448
+encaps,2295897,19096
+decaps,2604882,20648
+keypair,2075273,15448
+encaps,2295771,19096
+decaps,2604756,20648
+keypair,2075182,15448
+encaps,2295680,19096
+decaps,2604665,20648
+keypair,2075019,15448
+encaps,2295517,19096
+decaps,2604502,20648
+keypair,2075837,15448
+encaps,2296335,19096
+decaps,2605320,20648
+keypair,2075883,15448
+encaps,2296381,19096
+decaps,2605366,20648
+keypair,2075378,15448
+encaps,2295876,19096
+decaps,2604861,20648
+keypair,2075357,15448
+encaps,2295855,19096
+decaps,2604840,20648
+keypair,2075764,15448
+encaps,2296262,19096
+decaps,2605247,20648
+keypair,2093815,15448
+encaps,2314313,19096
+decaps,2623298,20648
+keypair,2075440,15448
+encaps,2295938,19096
+decaps,2604923,20648
+keypair,2095455,15448
+encaps,2315953,19096
+decaps,2624938,20648
+keypair,2075761,15448
+encaps,2296259,19096
+decaps,2605244,20648
+keypair,2075230,15448
+encaps,2295728,19096
+decaps,2604713,20648
+keypair,2094152,15448
+encaps,2314650,19096
+decaps,2623635,20648
+keypair,2075302,15448
+encaps,2295800,19096
+decaps,2604785,20648
+keypair,2076032,15448
+encaps,2296530,19096
+decaps,2605515,20648
+keypair,2074820,15448
+encaps,2295318,19096
+decaps,2604303,20648
+keypair,2075294,15448
+encaps,2295792,19096
+decaps,2604777,20648
+keypair,2075633,15448
+encaps,2296131,19096
+decaps,2605116,20648
+keypair,2075442,15448
+encaps,2295940,19096
+decaps,2604925,20648
+keypair,2075622,15448
+encaps,2296120,19096
+decaps,2605105,20648
+keypair,2075436,15448
+encaps,2295934,19096
+decaps,2604919,20648
+keypair,2075478,15448
+encaps,2295976,19096
+decaps,2604961,20648
+kem_match,1
+done

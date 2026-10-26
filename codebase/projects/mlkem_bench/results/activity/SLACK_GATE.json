@@ -1,0 +1,170 @@
+{
+ "rows": [
+  {
+   "board": "MCXN947",
+   "level": 512,
+   "budget_ms": 33.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 7.1,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 13.2,
+   "padding_cost_ms": 2.04,
+   "frames_of_slack_needed": 1.3,
+   "handshake_fits_budget": true
+  },
+  {
+   "board": "MCXN947",
+   "level": 512,
+   "budget_ms": 5.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 46.8,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 13.2,
+   "padding_cost_ms": 2.04,
+   "frames_of_slack_needed": 1.3,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "MCXN947",
+   "level": 768,
+   "budget_ms": 33.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 7.1,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 21.62,
+   "padding_cost_ms": 3.1,
+   "frames_of_slack_needed": 2.0,
+   "handshake_fits_budget": true
+  },
+  {
+   "board": "MCXN947",
+   "level": 768,
+   "budget_ms": 5.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 46.8,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 21.62,
+   "padding_cost_ms": 3.1,
+   "frames_of_slack_needed": 2.0,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "MCXN947",
+   "level": 1024,
+   "budget_ms": 33.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 7.1,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 33.77,
+   "padding_cost_ms": 3.91,
+   "frames_of_slack_needed": 2.5,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "MCXN947",
+   "level": 1024,
+   "budget_ms": 5.0,
+   "perception_full_ms": 2.34,
+   "perception_share_pct": 46.8,
+   "exit_slack_per_frame_ms": 1.54,
+   "handshake_ms": 33.77,
+   "padding_cost_ms": 3.91,
+   "frames_of_slack_needed": 2.5,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 512,
+   "budget_ms": 33.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 3046.7,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 13.2,
+   "padding_cost_ms": 2.04,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": true
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 512,
+   "budget_ms": 5.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 20108.3,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 13.2,
+   "padding_cost_ms": 2.04,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 768,
+   "budget_ms": 33.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 3046.7,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 21.62,
+   "padding_cost_ms": 3.1,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": true
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 768,
+   "budget_ms": 5.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 20108.3,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 21.62,
+   "padding_cost_ms": 3.1,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 1024,
+   "budget_ms": 33.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 3046.7,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 33.77,
+   "padding_cost_ms": 3.91,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": false
+  },
+  {
+   "board": "ESP32-S3",
+   "level": 1024,
+   "budget_ms": 5.0,
+   "perception_full_ms": 1005.41,
+   "perception_share_pct": 20108.3,
+   "exit_slack_per_frame_ms": 546.071,
+   "handshake_ms": 33.77,
+   "padding_cost_ms": 3.91,
+   "frames_of_slack_needed": 0.0,
+   "handshake_fits_budget": false
+  }
+ ],
+ "verdict": {
+  "MCXN947@33.0ms": {
+   "perception_share_pct": 7.1,
+   "exit_slack_as_fraction_of_padding": 0.497,
+   "holds": false
+  },
+  "MCXN947@5.0ms": {
+   "perception_share_pct": 46.8,
+   "exit_slack_as_fraction_of_padding": 0.497,
+   "holds": true
+  },
+  "ESP32-S3@33.0ms": {
+   "perception_share_pct": 3046.7,
+   "exit_slack_as_fraction_of_padding": 176.152,
+   "holds": true
+  },
+  "ESP32-S3@5.0ms": {
+   "perception_share_pct": 20108.3,
+   "exit_slack_as_fraction_of_padding": 176.152,
+   "holds": true
+  }
+ }
+}

@@ -1,0 +1,43 @@
+Library,Algorithm,Compile Flags,Cycles,Latency (ms),Stack HWM (Bytes),Flash Text (Bytes),Static Data (Bytes),Source / note
+PQClean (clean C),ML-KEM-768,-O2,2079000,13.86,,20680,,"mlkem_bench/o2, n=174 mean"
+PQClean (clean C),ML-KEM-768,-O2,2299500,15.33,,20680,,"mlkem_bench/o2, n=174 mean"
+PQClean (clean C),ML-KEM-768,-O2,2608500,17.39,,20680,,"mlkem_bench/o2, n=174 mean"
+PQClean (clean C),ML-KEM-768,-O0,4890000,32.60,,20680,,"mlkem_bench, single run"
+PQClean (clean C),ML-KEM-768,-O0,5685000,37.90,,20680,,"mlkem_bench, single run"
+PQClean (clean C),ML-KEM-768,-O0,6810000,45.40,,20680,,"mlkem_bench, single run"
+PQClean (clean C),ML-DSA-65 sign,-O2,13741500,91.61,,23848,,"mldsa_bench_nxp/b65o2, n=2000 mean; median 74.77"
+PQClean (clean C),ML-DSA-65 sign,-Os,13639500,90.93,,23848,,"mldsa_bench_nxp/b65, n=2000 mean; median 73.72"
+wolfSSL 5.9.2 (native),ML-KEM-512 keypair,-O2,653951,4.36,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-512 encapsulate,-O2,563751,3.76,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-512 decapsulate,-O2,762451,5.08,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 keypair,-O2,1051702,7.01,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 encapsulate,-O2,955852,6.37,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 decapsulate,-O2,1236298,8.24,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-1024 keypair,-O2,1660596,11.07,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-1024 encapsulate,-O2,1521098,10.14,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-1024 decapsulate,-O2,1883949,12.56,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-44 keypair,-O2,2174291,14.50,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-44 sign,-O2,4376368,29.18,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-44 verify,-O2,2179916,14.53,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-65 keypair,-O2,3769128,25.13,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-65 sign,-O2,9054690,60.36,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-65 verify,-O2,3686047,24.57,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-87 keypair,-O2,6486206,43.24,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-87 sign,-O2,12033694,80.22,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-DSA-87 verify,-O2,6362672,42.42,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),HashML-DSA-65 sign,-O2,8351893,55.68,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),HashML-DSA-65 verify,-O2,3667123,24.45,,,575910,libwolfssl_crypto.a; harness n=30 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 keypair,-Os,4198153,27.99,,,862146,libwolfssl_crypto.a; harness n=3 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 encapsulate,-Os,3782244,25.21,,,862146,libwolfssl_crypto.a; harness n=3 mean
+wolfSSL 5.9.2 (native),ML-KEM-768 decapsulate,-Os,4906611,32.71,,,862146,libwolfssl_crypto.a; harness n=3 mean
+wolfSSL 5.9.2 (native),ML-DSA-65 sign,-Os,44418123,296.12,,,862146,libwolfssl_crypto.a; harness n=3 mean
+mbedTLS 3.6.3 (classical),ECDH P-256,-O2,2952000,19.68,,,,securemark_tls_mcxn947
+mbedTLS 3.6.3 (classical),ECDSA P-256 sign,-O2,5104500,34.03,,,,securemark_tls_mcxn947
+mbedTLS 3.6.3 (classical),ECDSA P-256 verify,-O2,8430000,56.20,,,,securemark_tls_mcxn947
+mbedTLS 3.6.3 (classical),AES-128 CCM,-O2,12472,0.08,,,,securemark_tls_mcxn947
+mbedTLS 3.6.3 (classical),SHA-256,-O2,3737,0.02,,,,securemark_tls_mcxn947
+pqm4 (M4F asm),ML-KEM-768 keypair,-O3,3376500,22.51,,,,measured; decap/ML-DSA fault on M33
+pqm4 (M4F asm),ML-KEM-768 encapsulate,-O3,3598500,23.99,,,,measured; decap/ML-DSA fault on M33
+pqm4 (M4F asm),ML-KEM-768 decapsulate,-O3,,,,,,FAULTS on M33 (m4f asm)
+pqm4 (M4F asm),ML-DSA-44/65/87,-O3,,,,,,FAULTS on M33 (m4f asm)
+pqm4 (M4F asm),ML-KEM-512 keypair,-O3,,,,,,"measured speedup 1.39x vs PQClean, absolute not captured"

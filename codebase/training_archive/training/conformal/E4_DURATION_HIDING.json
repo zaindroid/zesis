@@ -1,0 +1,115 @@
+{
+ "rows": [
+  {
+   "level": 512,
+   "budget_ms": 33.0,
+   "policy": "no_defense",
+   "deadline_misses": 0,
+   "pad_ms_total": 0.0,
+   "ops_padded": 0,
+   "ops_total": 123,
+   "energy_mj": 516.6,
+   "energy_overhead_pct": 0.0,
+   "attacker_acc": 1.0
+  },
+  {
+   "level": 512,
+   "budget_ms": 33.0,
+   "policy": "always_pad",
+   "deadline_misses": 0,
+   "pad_ms_total": 83.6,
+   "ops_padded": 123,
+   "ops_total": 123,
+   "energy_mj": 543.2,
+   "energy_overhead_pct": 5.2,
+   "attacker_acc": 0.333
+  },
+  {
+   "level": 512,
+   "budget_ms": 33.0,
+   "policy": "deadline_aware",
+   "deadline_misses": 0,
+   "pad_ms_total": 83.6,
+   "ops_padded": 82,
+   "ops_total": 123,
+   "energy_mj": 543.2,
+   "energy_overhead_pct": 5.2,
+   "attacker_acc": 0.333
+  },
+  {
+   "level": 768,
+   "budget_ms": 33.0,
+   "policy": "no_defense",
+   "deadline_misses": 0,
+   "pad_ms_total": 0.0,
+   "ops_padded": 0,
+   "ops_total": 123,
+   "energy_mj": 815.5,
+   "energy_overhead_pct": 0.0,
+   "attacker_acc": 1.0
+  },
+  {
+   "level": 768,
+   "budget_ms": 33.0,
+   "policy": "always_pad",
+   "deadline_misses": 0,
+   "pad_ms_total": 127.1,
+   "ops_padded": 123,
+   "ops_total": 123,
+   "energy_mj": 854.5,
+   "energy_overhead_pct": 4.8,
+   "attacker_acc": 0.333
+  },
+  {
+   "level": 768,
+   "budget_ms": 33.0,
+   "policy": "deadline_aware",
+   "deadline_misses": 0,
+   "pad_ms_total": 125.9,
+   "ops_padded": 81,
+   "ops_total": 123,
+   "energy_mj": 854.1,
+   "energy_overhead_pct": 4.7,
+   "attacker_acc": 0.341
+  },
+  {
+   "level": 1024,
+   "budget_ms": 33.0,
+   "policy": "no_defense",
+   "deadline_misses": 0,
+   "pad_ms_total": 0.0,
+   "ops_padded": 0,
+   "ops_total": 123,
+   "energy_mj": 1200.5,
+   "energy_overhead_pct": 0.0,
+   "attacker_acc": 1.0
+  },
+  {
+   "level": 1024,
+   "budget_ms": 33.0,
+   "policy": "always_pad",
+   "deadline_misses": 0,
+   "pad_ms_total": 160.3,
+   "ops_padded": 123,
+   "ops_total": 123,
+   "energy_mj": 1246.8,
+   "energy_overhead_pct": 3.9,
+   "attacker_acc": 0.333
+  },
+  {
+   "level": 1024,
+   "budget_ms": 33.0,
+   "policy": "deadline_aware",
+   "deadline_misses": 0,
+   "pad_ms_total": 158.8,
+   "ops_padded": 81,
+   "ops_total": 123,
+   "energy_mj": 1246.4,
+   "energy_overhead_pct": 3.8,
+   "attacker_acc": 0.341
+  }
+ ],
+ "deadline_ms": 33.0,
+ "old_handshake_ms": 115.97,
+ "new_handshake_ms": 21.62
+}

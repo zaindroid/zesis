@@ -23,25 +23,29 @@ stacked PC = 0x40000000  stacked LR = 0xE000ED34   <- garbage
 ```
 
 **Decode (ARMv8-M, Cortex-M33):**
-- **CFSR bit 20 = UNSTKERR** — *unstacking error*: during exception return the
-  processor could not unstack the saved exception frame (the frame itself was
-  corrupted). It is **not** STKOF (bit 16), not UNALIGNED (bit 24), not
-  UNDEFINSTR (bit 16) and not a precise DACCVIOL (bit 30 — MMFAR/BFAR are
-  stale, no precise address was recorded).
-- **HFSR bit 30 = FORCED** — the original fault escalated to HardFault.
-- The stacked PC (0x40000000) is an EXC_RETURN-style value, not a code
-  address — the exception frame was already corrupt when the CPU tried to
-  stack/unstack it.
+- **CFSR bit 20 = STKOF** — *stack overflow*. On ARMv8-M the UsageFault status
+  register places STKOF at UFSR bit 4, which is CFSR bit 20 (0x00100000). This
+  is where the ARMv8-M layout differs from ARMv7-M, where the equivalent
+  stack faults sit in the MemManage and BusFault fields (MSTKERR bit 4,
+  MUNSTKERR bit 3; STKERR bit 12, UNSTKERR bit 13). An earlier revision of
+  this note read the value against the ARMv7-M layout and called it UNSTKERR,
+  which was wrong; on this core the bit means the stack limit was crossed.
+- **HFSR bit 30 = FORCED** — the original UsageFault escalated to HardFault.
+- The stacked PC (0x40000000) and LR (0xE000ED34) are not code addresses, and
+  MMFAR/BFAR are stale (0xE000ED34/0xE000ED38 are the debug register
+  addresses), so no precise faulting address was recorded.
 
-**Interpretation:** the m4f keypair **corrupted its own stack state** on the
-M33. The corruption was severe enough that the exception machinery itself
-could not unwind — an unstacking error — which escalated to HardFault.
+**Interpretation:** the optimised M4F routine crossed the stack limit on the
+M33. That is a stack-allocation problem in how the routine was linked and
+called, not an architectural incompatibility between the M4F assembly and the
+Cortex-M33. The hand-written M4F code allocates more stack than the 32 KB the
+harness had reserved.
 
 ## Result 2 — with a 128 KB stack the fault becomes a silent hang (GDB)
 
 The default project stack is **0x8000 (32 KB)** (`STACK_SIZE =
 DEFINED(__stack_size__)?__stack_size__:0x8000`). Rebuilding with
-`-Wl,--defsym=__stack_size__=0x20000` (128 KB) removed the UNSTKERR fault,
+`-Wl,--defsym=__stack_size__=0x20000` (128 KB) removed the STKOF fault,
 but the keypair then **hangs** (`kp..` printed, never `ok`). Halting the hung
 core via GDB:
 
@@ -68,15 +72,15 @@ the Cortex-M33**. The failure is:
 - **not** a TrustZone/security-state violation (no INVPC/INVSTATE/NOCP, and
   the MCXN947 here runs non-secure from boot),
 - **not** an illegal instruction (no UNDEFINSTR),
-- **not** a classic unaligned-access UsageFault (no UNALIGNED; the fault
-  class captured is an **unstacking error**, UNSTKERR),
-- but a **stack-discipline incompatibility**: the hand-written asm's stack /
-  frame handling (register push/pop lists, SP arithmetic, LDRD/STRD twiddle
-  loads in `smallntt_769.S`/`ntt.S` with 8-byte alignment requirements) does
-  not survive the M33's stricter ARMv8-M behavior. The first observable
-  symptom depends on stack size: at 32 KB the M33's stack-limit hardware
-  escalates to HardFault (UNSTKERR+FORCED); at 128 KB the corruption silently
-  derails PC/LR/SP into an infinite loop in RAM.
+- **not** a classic unaligned-access UsageFault (no UNALIGNED),
+- but a **stack overflow** (STKOF): the fault class recorded is the stack
+  limit being crossed, which points at how much stack the routine uses and
+  how the harness allowed for it. The first observable symptom depends on
+  stack size: at 32 KB the M33's stack-limit hardware raises STKOF and it
+  escalates to HardFault; at 128 KB the fault is gone but the run still
+  derails into an infinite loop in RAM, which suggests the routine also
+  depends on its own frame layout in a way the harness does not currently
+  satisfy.
 
 ## Why this is a genuine portability finding
 
@@ -85,8 +89,8 @@ the Cortex-M33**. The failure is:
    (ARMv8-M) catches stack corruption at the hardware level — so "the same
    code" fails *differently and detectably* on the modern core.
 2. The naive expectation ("M4F asm on M33 = unaligned LDRD fault") is
-   **wrong** in this case: the register evidence points to unstacking/stack
-   corruption, not an alignment UsageFault.
+   **wrong** in this case: the register evidence points to a stack overflow
+   (STKOF), not an alignment UsageFault.
 3. The clean-C pqm4 reference and the PQClean clean-C path both run
    correctly on the same board with the same 128 KB stack — isolating the
    failure to the **hand-written assembly**, not the algorithm or the SoC.

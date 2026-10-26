@@ -1,0 +1,4 @@
+level,n,min_ms,p50_ms,p90_ms,p95_ms,p99_ms,max_ms,worst_over_median,median_fits_10Hz_worst_fits
+ML-DSA-44,2000,25.39,43.94,104.84,125.16,181.91,289.05,6.6,yes/no
+ML-DSA-65,2000,39.97,73.72,170.41,215.41,293.99,505.68,6.9,yes/no
+ML-DSA-87,2000,64.12,99.41,208.28,253.86,336.24,477.86,4.8,yes/no
