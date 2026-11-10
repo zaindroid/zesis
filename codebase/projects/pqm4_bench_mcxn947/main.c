@@ -56,8 +56,13 @@ void HardFault_Handler(void)
 #if 1
 static void StackPaint(void)
 {
+    /* Paint only the unused region BELOW the current frame. Painting up to
+       __StackTop would overwrite the live stack, because SP sits just below it. */
+    uint32_t sp;
+    __asm volatile ("mov %0, sp" : "=r"(sp));
     volatile char *p = __StackLimit;
-    while (p < __StackTop - STACK_MARGIN) { *p = 0xAA; p++; }
+    volatile char *end = (volatile char *)((sp - 512u) & ~0x7u);
+    while (p < end) { *p = 0xAA; p++; }
 }
 #endif
 #if 0
@@ -130,7 +135,7 @@ static uint8_t s_msg[32];
 #define CTB MLKEM_CT_768
 #define SSB MLKEM_SS_768
 #endif
-static uint8_t pk[PKB] __attribute__((aligned(8))), sk[SKB] __attribute__((aligned(8))), ct[CTB] __attribute__((aligned(8))), ss1[SSB];
+static uint8_t pk[PKB] __attribute__((aligned(8))), sk[SKB] __attribute__((aligned(8))), ct[CTB] __attribute__((aligned(8))), ss1[SSB], ss2[SSB];
 #else /* MLDSA */
 #if LEVEL == 44
 #define PKB MLDSA_PK_44
@@ -152,11 +157,22 @@ static size_t siglen;
 static void RunIter(int i)
 {
 #if ALG_IS_MLKEM
-    dwt_reset(); crypto_kem_keypair(pk, sk); s_cycles[i][0] = dwt_get();
+    PRINTF("[paint]"); StackPaint(); PRINTF("[kp]");
+    dwt_reset(); crypto_kem_keypair(pk, sk); s_cycles[i][0] = dwt_get(); PRINTF("ok");
 #ifndef SKIP_ENC
-    dwt_reset(); crypto_kem_enc(ct, ss1, pk); s_cycles[i][1] = dwt_get();
+    PRINTF("[enc]"); StackPaint(); dwt_reset(); crypto_kem_enc(ct, ss1, pk); s_cycles[i][1] = dwt_get(); PRINTF("ok");
+#else
+    s_cycles[i][1] = 0;
 #endif
-    s_cycles[i][2] = 0; /* decap: m4f asm faults on M33 (documented) */
+#ifndef SKIP_DEC
+    /* measured for real: with -O2 plus the upstream instrumentation patch the
+       m4fstack decapsulation path is expected to complete on the M33. If it
+       faults, the HardFault handler dumps CFSR/PC before the run ends. */
+    PRINTF("[dec]"); dwt_reset(); crypto_kem_dec(ss2, ct, sk); s_cycles[i][2] = dwt_get(); PRINTF("ok");
+#else
+    (void)ss2;
+    s_cycles[i][2] = 0;
+#endif
     s_cycles[i][3] = 0;
 #else
     dwt_reset();
@@ -188,13 +204,32 @@ int main(void)
 #endif
            LEVEL);
 
-    /* ENERGY MODE (reset-loop): the m4f asm corrupts state after the first
-       kp+enc (second call hangs). So run ONE kp+enc per boot, then software-
-       reset. The PPK2 sees repeated clean crypto windows. */
-    RunIter(0);
+#ifdef RESET_LOOP
+    /* One keypair+encapsulate per boot, then reboot. State is corrupted after
+       the first pair, so repeating inside one boot is impossible; rebooting
+       gives an independent sample each time. */
+    {
+        PRINTF("[paint]"); StackPaint(); PRINTF("[kp]");
+        dwt_reset(); crypto_kem_keypair(pk, sk); s_cycles[0][0] = dwt_get();
+        PRINTF("ok[enc]");
+        dwt_reset(); crypto_kem_enc(ct, ss1, pk); s_cycles[0][1] = dwt_get();
+        PRINTF("ok\r\n");
+        PRINTF("S,%u,%u\r\n",
+               (unsigned)s_cycles[0][0], (unsigned)s_cycles[0][1]);
+        for (volatile uint32_t d = 0; d < 2000000u; d++) { }
+        NVIC_SystemReset();
+    }
+#endif
+
+    /* Full REPS loop with per-iteration progress, so a hang is localised.
+       The earlier reset-loop existed because m4fspeed at -O0 corrupted state
+       after the first kp+enc; with m4fstack plus -O2 that is re-tested here. */
+    for (int i = 0; i < REPS; i++) {
+        PRINTF("i=%d ", i);
+        RunIter(i);
+        PRINTF("done\r\n");
+    }
     PRINTF("CYCLE_DONE\r\n");
-    for (volatile uint32_t d = 0; d < 100000; d++) { }
-    NVIC_SystemReset();
 
     PRINTF("op,cycles,stack_hwm\r\n");
 #if ALG_IS_MLKEM

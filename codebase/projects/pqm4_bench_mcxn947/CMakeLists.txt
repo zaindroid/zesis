@@ -65,3 +65,21 @@ mcux_add_macro(CX ${ALG_DEFS})
 # (CFSR.STKOF). Match the clean-C ML-DSA bench stack (128KB). Appended AFTER
 # the SDK setup so the linker script (-T) flags are preserved.
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--defsym=__stack_size__=0x20000")
+
+# Single methodology level across all primitive comparisons: -O2.
+# (Earlier pqm4 runs used the debug preset, which applies no -O flag at all.)
+target_compile_options(${MCUX_SDK_PROJECT_NAME} PRIVATE -O2)
+
+# Optional: skip decapsulation (pqm4 ML-KEM decapsulation hangs on this core;
+# see results notes). Lets the keypair/encapsulate run complete.
+option(SKIP_DEC "skip ML-KEM decapsulation" OFF)
+if(SKIP_DEC)
+  target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PRIVATE SKIP_DEC=1)
+endif()
+
+# One keypair+encapsulate per boot, then reboot: repeated-sample mode for pqm4,
+# whose state is corrupted after the first pair.
+option(RESET_LOOP "one kp+enc per boot, then reset" OFF)
+if(RESET_LOOP)
+  target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PRIVATE RESET_LOOP=1)
+endif()

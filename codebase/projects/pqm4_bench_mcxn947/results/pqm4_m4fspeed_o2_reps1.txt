@@ -1,0 +1,9 @@
+
+PQM4_BEGIN alg=MLKEM level=768
+i=0 [paint][kp]ok[enc]okdone
+CYCLE_DONE
+op,cycles,stack_hwm
+kp,1044105,0
+enc,1073017,0
+dec,0,0
+PQM4_END
