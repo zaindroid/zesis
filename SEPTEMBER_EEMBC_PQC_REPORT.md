@@ -237,8 +237,10 @@ ML-DSA signing over 256 B telemetry frames, n = 2000 per level, PQClean:
 | Level | median | p99 | max | worst/median |
 |---|---|---|---|---|
 | ML-DSA-44 | 43.94 ms | 181.91 ms | 289.05 ms | 6.6x |
-| ML-DSA-65 (-Os) | 73.72 ms | 293.99 ms | 505.68 ms | 6.9x |
-| ML-DSA-65 (-O2) | 74.77 ms | 291.54 ms | 500.57 ms | 6.7x |
+| ML-DSA-65 (-Os) | 73.72 ms | 293.94 ms | 505.68 ms | 6.9x |
+| ML-DSA-65 (-O2) | 74.77 ms | 291.49 ms | 500.57 ms | 6.7x |
+
+Percentiles are nearest-rank, so they match the LaTeX table.
 | ML-DSA-87 | 99.41 ms | 336.24 ms | 477.86 ms | 4.8x |
 
 At a 10 Hz telemetry budget (100 ms/frame) the median fits and the worst case

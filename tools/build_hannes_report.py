@@ -87,7 +87,7 @@ story.append(P("Sampling needed a workaround. pqm4 corrupts its state after the 
                "identical in every boot, so there is no scatter to report."))
 
 story.append(P("The loop is in "
-               "<font face='DV-M'>zain_pqc/results/pqm4/main.c</font>, guarded by "
+               "<font face='DV-M'>zain_pqc/pqm4_bench/main.c</font>, guarded by "
                "<font face='DV-M'>#ifdef RESET_LOOP</font>.", NOTE))
 story.append(P("Result", H2))
 story.append(T([
@@ -143,8 +143,7 @@ story.append(P("Code and data, branch "
                "<font face='DV-M' size='7.5'>zain_pqc</font>", H2))
 story.append(T([
     ["File", "Contents"],
-    ["<font face='DV-M' size='7.5'>results/pqm4/main.c</font>, "
-     "<font face='DV-M' size='7.5'>CMakeLists.txt</font>",
+    ["<font face='DV-M' size='7.5'>pqm4_bench/</font>",
      "pqm4 bench harness, including the reset-loop sampling mode"],
     ["<font face='DV-M' size='7.5'>results/pqm4/PQM4_O2_SUMMARY.csv</font>",
      "the four-way table above, machine-readable"],
