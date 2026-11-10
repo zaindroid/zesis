@@ -223,20 +223,24 @@ story.append(T([
     ["ML-KEM-768 encapsulation", "Implementation", "Flags", "Time", "Cycles"],
     ["Reference", "PQClean clean C", "-O2", "15.33 ms", "2,299,500"],
     ["<b>Embedded engine</b>", "<b>wolfSSL native</b>", "-O2", "<b>6.37 ms</b>", "<b>955,000</b>"],
-    ["Hand-tuned assembly", "pqm4 (Cortex-M4F asm)", "-O3", "23.99 ms", "3,598,500"],
+    ["Hand-tuned assembly", "pqm4 (Cortex-M4F asm)", "SDK debug (no -O)", "23.99 ms", "3,598,500"],
 ], [38 * mm, 42 * mm, 16 * mm, 24 * mm, 26 * mm], align_right=(3, 4)))
 story.append(Spacer(1, 3))
-story.append(P("Two results worth reporting plainly. <b>wolfSSL's portable C is 2.41x faster than the "
-               "reference clean-C implementation</b> at identical flags &mdash; a library effect, not a "
-               "compiler effect. And <b>the hand-tuned Cortex-M4F assembly is the slowest of the "
-               "three</b>: it is not portable to ARMv8-M, its decapsulation and all of ML-DSA fault on "
-               "the M33, and its encapsulation is 1.6x slower than plain clean C at matched -O2. The "
-               "expected ordering &mdash; reference, then portable engine, then assembly &mdash; does not "
-               "hold on this core."))
-story.append(P("ML-DSA-65 signing shows the same pattern: PQClean 91.61 ms mean at -O2 against "
-               "wolfSSL 60.36 ms, a <b>1.52x</b> library effect. Optimisation level is almost "
-               "irrelevant to PQClean's ML-DSA (median 73.72 ms at -Os versus 74.77 ms at -O2, a "
-               "1.01x change), so the gap is the library, not the compiler.", BODY))
+story.append(P("The controlled comparison is the first two rows: same flags, same board, and "
+               "<b>wolfSSL's portable C is 2.41x faster than the reference clean-C implementation</b> "
+               "&mdash; a library effect, not a compiler effect. ML-DSA-65 signing shows the same "
+               "pattern: PQClean 91.61 ms mean at -O2 against wolfSSL 60.36 ms, a <b>1.52x</b> library "
+               "effect."))
+story.append(P("<b>The pqm4 row is not a matched-flag comparison</b> and should not be read as one. It "
+               "was built with the SDK debug preset, which applies no optimisation flag, so the "
+               "like-for-like reference is PQClean at -O0 (37.9 ms), against which pqm4 is 1.58x "
+               "<i>faster</i>. Comparing its 23.99 ms against PQClean's -O2 figure would be an "
+               "unmatched comparison. Rebuilding pqm4 at -O2 and re-measuring is outstanding work. "
+               "What the row does establish, independently of flags, is portability: pqm4's Cortex-M4F "
+               "assembly does not run cleanly on ARMv8-M &mdash; decapsulation hangs and all of ML-DSA "
+               "faults on the M33.", BODY))
+story.append(P("Optimisation level is almost irrelevant to PQClean's ML-DSA: median 73.72 ms at -Os "
+               "versus 74.77 ms at -O2, a 1.01x change. That gap is the library, not the compiler.", BODY))
 
 story.append(P("4.3 Optimisation sensitivity", H2))
 story.append(P("Same code, same board:", BODY))
@@ -249,8 +253,10 @@ story.append(T([
     ["PQClean ML-DSA-65 sign (median)", "73.72 ms", "74.77 ms", "1.01x"],
 ], [62 * mm, 28 * mm, 28 * mm, 20 * mm]))
 story.append(P("This is why the optimisation level had to be fixed before any comparison: a "
-               "five-fold difference across the board, and near-zero for one primitive. <b>-O2 is "
-               "now the stated level for every number in this report.</b>", SMALL))
+               "five-fold difference across the board, and near-zero for one primitive. <b>-O2 is the "
+               "stated level throughout, with two exceptions marked where they occur</b>: the pqm4 row "
+               "in section 4.2 is an SDK debug build, and the ML-DSA-44 / ML-DSA-87 rows in section "
+               "5.2 have no recorded flag.", SMALL))
 
 story.append(PageBreak())
 
@@ -278,13 +284,18 @@ story.append(P("Three findings. <b>Hashing dominates pure ML-DSA verification</b
 story.append(P("5.2 Task 3B &mdash; 256 B telemetry signing and the fat tail", H2))
 story.append(T([
     ["Level", "median", "p99", "max", "worst / median"],
-    ["ML-DSA-44", "43.94 ms", "181.91 ms", "289.05 ms", "6.6x"],
-    ["ML-DSA-65", "73.72 ms", "293.99 ms", "505.68 ms", "6.9x"],
-    ["ML-DSA-87", "99.41 ms", "336.24 ms", "477.86 ms", "4.8x"],
+    ["ML-DSA-44", "43.94 ms", "181.91 ms", "289.05 ms", "6.6x *"],
+    ["ML-DSA-65", "74.77 ms", "291.54 ms", "500.57 ms", "6.7x"],
+    ["ML-DSA-87", "99.41 ms", "336.24 ms", "477.86 ms", "4.8x *"],
 ], [26 * mm, 26 * mm, 28 * mm, 28 * mm, 28 * mm], align_right=(1, 2, 3, 4)))
 story.append(P("n = 2000 per level. At a 10 Hz telemetry budget (100 ms/frame) the median fits at "
                "every level and the worst case does not. ML-DSA signing is rejection-sampled, so it "
-               "has a fat right tail; a design that checks only the median is not safe.", SMALL))
+               "has a fat right tail; a design that checks only the median is not safe. The ML-DSA-65 "
+               "row is the -O2 run. <b>* The optimisation flag for ML-DSA-44 and ML-DSA-87 was not "
+               "recorded in the capture files</b> &mdash; they come from the same batch as the -Os "
+               "ML-DSA-65 run, so they are best read as -Os. This does not affect the conclusion: "
+               "ML-DSA-65 measured at both flags differs by 1.4% on the median (73.72 versus 74.77 ms) "
+               "and 1.0% on the maximum, so the tail finding is insensitive to the flag.", SMALL))
 
 # ------------------------------------------------------------- 6. method
 story.append(P("6. Method notes", H2))
