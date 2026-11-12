@@ -1,0 +1,5 @@
+board,cpu,clock_hz,implementation,keypair_ms,encaps_ms,decaps_ms,encaps_cycles,n,library_ratio_vs_pqclean
+FRDM-MCXN947,Cortex-M33,150000000,wolfSSL native,7.01,6.37,,955000,30,2.41
+FRDM-MCXN947,Cortex-M33,150000000,PQClean clean C,13.86,15.33,,2299500,100,1.00
+ESP32-S3,Xtensa LX7,240000000,wolfSSL native,4.87,6.38,7.26,1530237,50,1.36
+ESP32-S3,Xtensa LX7,240000000,PQClean clean C,7.68,8.68,9.95,2083436,50,1.00
