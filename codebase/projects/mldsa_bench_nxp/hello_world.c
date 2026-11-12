@@ -43,6 +43,7 @@
 #define ALGNAME PQCLEAN_MLDSA44_CLEAN_CRYPTO_ALGNAME
 #define KEYGEN PQCLEAN_MLDSA44_CLEAN_crypto_sign_keypair
 #define SIGN PQCLEAN_MLDSA44_CLEAN_crypto_sign_signature
+#define SIGN_CTX PQCLEAN_MLDSA44_CLEAN_crypto_sign_signature_ctx
 #define VERIFY PQCLEAN_MLDSA44_CLEAN_crypto_sign_verify_ctx
 #define BENCH_RESET PQCLEAN_MLDSA44_CLEAN_bench_reset_rejections
 #define BENCH_GET PQCLEAN_MLDSA44_CLEAN_bench_get_rejections
@@ -53,6 +54,7 @@
 #define ALGNAME PQCLEAN_MLDSA65_CLEAN_CRYPTO_ALGNAME
 #define KEYGEN PQCLEAN_MLDSA65_CLEAN_crypto_sign_keypair
 #define SIGN PQCLEAN_MLDSA65_CLEAN_crypto_sign_signature
+#define SIGN_CTX PQCLEAN_MLDSA65_CLEAN_crypto_sign_signature_ctx
 #define VERIFY PQCLEAN_MLDSA65_CLEAN_crypto_sign_verify_ctx
 #define BENCH_RESET PQCLEAN_MLDSA65_CLEAN_bench_reset_rejections
 #define BENCH_GET PQCLEAN_MLDSA65_CLEAN_bench_get_rejections
@@ -63,6 +65,7 @@
 #define ALGNAME PQCLEAN_MLDSA87_CLEAN_CRYPTO_ALGNAME
 #define KEYGEN PQCLEAN_MLDSA87_CLEAN_crypto_sign_keypair
 #define SIGN PQCLEAN_MLDSA87_CLEAN_crypto_sign_signature
+#define SIGN_CTX PQCLEAN_MLDSA87_CLEAN_crypto_sign_signature_ctx
 #define VERIFY PQCLEAN_MLDSA87_CLEAN_crypto_sign_verify_ctx
 #define BENCH_RESET PQCLEAN_MLDSA87_CLEAN_bench_reset_rejections
 #define BENCH_GET PQCLEAN_MLDSA87_CLEAN_bench_get_rejections
@@ -70,10 +73,21 @@
 #error "MLDSA_LEVEL must be 44, 65, or 87"
 #endif
 
+#ifndef N_SIGN
 #define N_SIGN 2000
+#endif
+#ifndef N_DET
 #define N_DET 100
-/* Task 3B: 256-byte device-to-infrastructure telemetry frame (was 32 B). */
+#endif
+/* 256 B is the device-to-infrastructure telemetry frame. Override with
+   -DMSG_LEN=4096 for the certificate-sized case. */
+#ifndef MSG_LEN
 #define MSG_LEN 256
+#endif
+/* FIPS 204 context string length. 0 = no context (default). */
+#ifndef CTX_LEN
+#define CTX_LEN 0
+#endif
 
 /* Result buffers in RAM (dumped only after the timed loop). */
 static uint32_t s_sign_cycles[N_SIGN];
@@ -88,6 +102,7 @@ static uint8_t s_pk[PKBYTES];
 static uint8_t s_sk[SKBYTES];
 static uint8_t s_sig[SGBYTES];
 static uint8_t s_msg[MSG_LEN];
+static uint8_t s_ctx[CTX_LEN ? CTX_LEN : 1];
 
 /* Linker-provided stack bounds for stack painting. */
 extern uint32_t __StackLimit[];
@@ -153,10 +168,12 @@ int main(void)
     {
         /* Different message every iteration. */
         for (int j = 0; j < MSG_LEN; j++) { s_msg[j] = (uint8_t)(i + j * 7 + 1); }
+        for (int j = 0; j < CTX_LEN; j++) { s_ctx[j] = (uint8_t)(0xA5 ^ j); }
         size_t siglen = SGBYTES;
         BENCH_RESET();
         dwt_reset();
-        int r = SIGN(s_sig, &siglen, s_msg, MSG_LEN, s_sk);
+        int r = SIGN_CTX(s_sig, &siglen, s_msg, MSG_LEN,
+                         (CTX_LEN ? s_ctx : NULL), CTX_LEN, s_sk);
         c = dwt_get();
         s_sign_cycles[i] = c;
         s_sign_retries[i] = BENCH_GET();
@@ -167,7 +184,7 @@ int main(void)
             fail++;
             continue;
         }
-        int vr = VERIFY(s_sig, siglen, s_msg, MSG_LEN, NULL, 0, s_pk);
+        int vr = VERIFY(s_sig, siglen, s_msg, MSG_LEN, (CTX_LEN ? s_ctx : NULL), CTX_LEN, s_pk);
         s_sign_fail[i] = (vr != 0) ? 2 : 0;
         if (vr != 0) { fail++; }
     }
@@ -177,7 +194,7 @@ int main(void)
     {
         StackPaint();
         dwt_reset();
-        VERIFY(s_sig, SGBYTES, s_msg, MSG_LEN, NULL, 0, s_pk);
+        VERIFY(s_sig, SGBYTES, s_msg, MSG_LEN, (CTX_LEN ? s_ctx : NULL), CTX_LEN, s_pk);
         c = dwt_get();
         s_vf_cycles[i] = c;
         s_vf_stack[i] = StackHighWaterMarkBytes();

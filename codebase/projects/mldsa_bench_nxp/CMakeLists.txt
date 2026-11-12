@@ -45,3 +45,12 @@ set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--defsym=__stack_size_
 # Methodology: compile at -O2 (overrides the SDK release preset's -Os) so the
 # PQClean ML-DSA reference is at the same level as the wolfSSL/harness numbers.
 target_compile_options(${MCUX_SDK_PROJECT_NAME} PRIVATE -O2)
+
+# Message length, FIPS 204 context length and sample count are configurable so
+# the same bench covers the 256 B telemetry frame, a 4 KB certificate and a
+# context-string run.
+set(MSG_LEN "256" CACHE STRING "message bytes")
+set(CTX_LEN "0" CACHE STRING "FIPS 204 context bytes")
+set(N_SIGN "2000" CACHE STRING "signing samples")
+target_compile_definitions(${MCUX_SDK_PROJECT_NAME} PRIVATE
+    MSG_LEN=${MSG_LEN} CTX_LEN=${CTX_LEN} N_SIGN=${N_SIGN})
